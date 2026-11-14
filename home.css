@@ -1,3 +1,79 @@
-.cohort-journey{grid-template-columns:repeat(4,minmax(0,1fr))}.cohort-journey article{padding-right:25px;margin-right:25px}.cohort-journey h3{font-size:18px}.career-section{display:grid;grid-template-columns:1.2fr 1fr;gap:90px;padding-top:85px;padding-bottom:85px}.career-section h2{font-size:38px}.career-intro{max-width:420px;color:var(--muted);font-size:14px;line-height:1.85;margin-bottom:0}.career-support{border-top:1px solid var(--line)}.career-support article{padding:24px 0;border-bottom:1px solid var(--line)}.career-support article:first-child{padding-top:24px}.career-support h3{font-size:17px;font-weight:550;letter-spacing:-.4px;margin-bottom:12px}.career-support p{font-size:13px;line-height:1.85;color:var(--muted);margin-bottom:0}.career-section+.community-section{padding-top:5px}
-@media(min-width:761px) and (max-width:1100px){.cohort-journey{grid-template-columns:1fr 1fr;row-gap:32px}.cohort-journey article:nth-child(2){border-right:0;margin-right:0;padding-right:0}.cohort-journey article:nth-child(n+3){border-top:1px solid #ced1c5}.career-section{gap:45px}.career-section h2{font-size:32px}}
-@media(max-width:760px){.cohort-journey{grid-template-columns:1fr}.cohort-journey article{padding:26px 0 28px;margin:0}.cohort-journey h3{font-size:18px}.career-section{grid-template-columns:1fr;gap:30px;padding-top:53px;padding-bottom:55px}.career-section h2{font-size:31px}.career-intro{max-width:none;font-size:13px}.career-support article{padding:21px 0}.career-support h3{font-size:17px}.career-section+.community-section{padding-top:0}}
+/* Homepage layout. Shared brand styles live in styles.css. */
+.hero{padding-bottom:65px;border-bottom:1px solid var(--line)}
+.hero-copy>.eyebrow,.intro-section>.eyebrow{font-size:12px;letter-spacing:0;text-transform:none;font-weight:500;color:var(--muted)}
+.intro-section{padding-top:70px;padding-bottom:75px}
+.intro-columns{grid-template-columns:1fr;gap:0;max-width:740px}
+.intro-columns p{margin-bottom:18px}
+.note{margin-top:5px}
+.experience-section{background:transparent;padding:60px 0 70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-heading{align-items:start;margin-bottom:35px}
+.section-heading>p{max-width:280px}
+.cohort-journey{grid-template-columns:1fr 1fr;gap:35px 70px;border-top:0}
+.cohort-journey article,.cohort-journey article:last-child{padding:0;margin:0;border:0;max-width:500px}
+.cohort-journey h3{font-size:18px;margin:0 0 12px;letter-spacing:-.4px;font-weight:600}
+.cohort-journey p{line-height:1.85}
+.career-section{display:grid;grid-template-columns:1.2fr 1fr;gap:90px;padding-top:75px;padding-bottom:75px}
+.career-section h2{font-size:38px}
+.career-intro{max-width:420px;color:var(--muted);font-size:14px;line-height:1.85;margin-bottom:0}
+.career-support{border-top:1px solid var(--line)}
+.career-support article{padding:24px 0;border-bottom:1px solid var(--line)}
+.career-support h3{font-size:17px;font-weight:550;letter-spacing:-.4px;margin-bottom:12px}
+.career-support p{font-size:13px;line-height:1.85;color:var(--muted);margin-bottom:0}
+.career-section+.community-section{padding-top:5px}
+.community-photo{margin:0;min-width:0}
+.community-photo>img{display:block;width:100%;height:auto;aspect-ratio:1.05;object-fit:cover;object-position:50% 62%}
+.community-photo figcaption{padding-top:10px;font-size:10px;line-height:1.6;color:var(--muted)}
+.community-photo figcaption a:hover,.inline-link:hover{text-decoration:underline;text-underline-offset:3px}
+.inline-link{text-decoration:underline;text-underline-offset:3px}
+.faq-section>h2{font-size:28px}
+.get-involved{background:transparent;border-top:1px solid var(--line);padding:52px 0}
+.cta-heading h2{font-size:38px;letter-spacing:-1.5px;line-height:1.2;margin-bottom:30px}
+@media(min-width:761px) and (max-width:1100px){.career-section{gap:45px}.career-section h2{font-size:32px}.cohort-journey{gap:30px 40px}}
+@media(max-width:760px){
+.hero{padding-bottom:30px}.intro-section{padding-top:45px;padding-bottom:45px}
+.experience-section{padding:44px 0}.section-heading>p{margin-top:18px}
+.cohort-journey{grid-template-columns:1fr;gap:25px}
+.cohort-journey article,.cohort-journey article:last-child{display:block;padding:0;margin:0;border:0;max-width:none}
+.cohort-journey h3{font-size:18px;margin:0 0 10px}
+.career-section{grid-template-columns:1fr;gap:28px;padding-top:45px;padding-bottom:45px}
+.career-section h2{font-size:31px}.career-intro{max-width:none;font-size:14px}
+.career-support article{padding:21px 0}.career-support h3{font-size:17px}
+.career-section+.community-section{padding-top:0}
+.community-photo>img{aspect-ratio:1.15;object-position:50% 62%}
+.faq-section>h2{font-size:28px;margin-bottom:25px}
+.get-involved{padding:40px 0}.cta-heading h2{font-size:32px;letter-spacing:-1.4px}
+}
+
+.career-photo{display:block;width:100%;max-width:440px;height:auto;margin-top:28px}
+@media(max-width:760px){.career-photo{max-width:none;margin-top:24px}}
+
+.community-copy .text-link{font-size:17px;font-weight:600;line-height:1.5;padding:12px 0;color:var(--blue);border-bottom-color:var(--blue)}
+
+/* Cohort stages stack on scroll; mobile keeps a normal reading flow. */
+.experience-section{padding-bottom:60px;overflow:visible}
+.cohort-panels{display:grid;gap:28px;isolation:isolate}
+.cohort-panel{position:sticky;top:24px;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;min-height:460px;padding:50px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cohort-panel-copy{max-width:450px}
+.cohort-stage{font-size:12px;font-weight:600;margin:0 0 32px}
+.cohort-panel h3{font-size:clamp(27px,2.65vw,39px);line-height:1.2;letter-spacing:-1.5px;font-weight:500;margin:0 0 24px}
+.cohort-panel-copy>p:last-child{font-size:14px;line-height:1.85;margin:0;max-width:410px}
+.cohort-individual{background:#e9eddf;z-index:1}
+.cohort-team{top:44px;background:#e3eaf0;z-index:2}
+.cohort-discussion{top:64px;background:#263c32;color:#f8f7f3;border-color:#263c32;z-index:3}
+.cohort-presentation{top:84px;background:#efe8d8;z-index:4}
+.cohort-panel-image img{display:block;width:100%;height:auto;aspect-ratio:1.12;object-fit:cover;border-radius:5px}
+.cohort-individual .cohort-panel-image img{object-position:48% 50%}
+.cohort-team .cohort-panel-image img{object-position:53% 50%}
+.cohort-discussion-note{border-top:1px solid #7b8c7d;padding:22px 0;max-width:420px}
+.cohort-discussion-note>p{font-size:12px;color:#c7d1c2;margin-bottom:24px}
+.cohort-discussion-note ul{list-style:none;padding:0;margin:0 0 28px}
+.cohort-discussion-note li{font-family:Manrope,Arial,sans-serif;font-size:23px;letter-spacing:-.6px;line-height:1.4;padding:17px 0;border-bottom:1px solid #607365}
+.cohort-discussion-note>span{font-size:12px;color:#d8d9b4}
+.cohort-presentation-note{background:var(--paper);padding:30px 34px;transform:rotate(-2deg);border:1px solid #d7d1c4}
+.cohort-presentation-note>span{font-size:11px;color:var(--muted)}
+.cohort-presentation-note>div{margin-top:25px}
+.cohort-presentation-note p{font-family:Manrope,Arial,sans-serif;font-size:25px;letter-spacing:-.8px;padding:14px 0;margin:0;border-bottom:1px solid var(--line)}
+.cohort-presentation-note p:last-child{border-bottom:0}
+@media(min-width:761px) and (max-width:1100px){.cohort-panel{padding:32px;gap:30px;min-height:420px}.cohort-panel h3{font-size:30px}.cohort-discussion-note li{font-size:20px}}
+@media(max-width:760px){.experience-section{padding-bottom:44px}.cohort-panels{gap:20px}.cohort-panel{position:relative;top:auto;grid-template-columns:1fr;gap:28px;min-height:0;padding:28px 24px;border-radius:10px}.cohort-stage{margin-bottom:22px}.cohort-panel h3{font-size:29px;letter-spacing:-1.1px;margin-bottom:20px}.cohort-panel-copy>p:last-child{font-size:14px}.cohort-panel-image img{aspect-ratio:1.35}.cohort-discussion-note{max-width:none}.cohort-discussion-note li{font-size:20px}.cohort-presentation-note{transform:none;padding:25px}.cohort-presentation-note p{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.cohort-panel{position:relative;top:auto}.cohort-presentation-note{transform:none}}
