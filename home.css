@@ -108,3 +108,10 @@
 
 .hero-copy>.eyebrow{font-size:17px;line-height:1.6;color:var(--ink)}
 @media(max-width:760px){.hero-copy>.eyebrow{font-size:15px}}
+
+.home-partner{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-top:10px;padding-bottom:58px}
+.home-partner h2{font-size:24px;font-weight:500;letter-spacing:-.7px;line-height:1.4;margin:0}
+.home-partner>a{display:block;width:230px;max-width:100%}
+.home-partner img{display:block;width:100%;height:auto}
+.home-partner>a:hover{opacity:.8}
+@media(max-width:760px){.home-partner{align-items:flex-start;flex-direction:column;gap:23px;padding-top:0;padding-bottom:42px}.home-partner h2{font-size:22px}.home-partner>a{width:210px}}

@@ -22,4 +22,4 @@
 
 .team-photo img.abigail-portrait{object-position:50% 37%}
 
-.team-photo img.adewale-oderinde-portrait{object-position:50% 10%}
+.team-photo img.adewale-oderinde-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}

@@ -1,0 +1,1 @@
+DataCamp Donates logo supplied in the brand kit linked by DataCamp in the partnership welcome email. Source: https://drive.google.com/file/d/1hyqOeiq6ETy88LSPON5H0X9NzWfZz5Gq/view . Original file: DC_Donates_logo_regular.png. Used unchanged. Partnership details: 250 licences; activation 1 December 2026. MailerLite form URL/embed is pending from the site owner.
