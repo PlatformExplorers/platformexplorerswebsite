@@ -1,26 +1,37 @@
 # Platform Explorers website
 
-Official website: https://platformexplorers.com
+The website is published at https://platformexplorers.com using GitHub Pages.
 
-This repository contains the static website for Platform Explorers, a registered nonprofit company in Ireland. It includes the homepage, About us, Contact, and Partner with us pages.
+## Contribute a blog
 
-## GitHub Pages
+Read [contribution.md](contribution.md) for step-by-step instructions using VS Code
+or GitHub in your browser. The same guide is published at
+https://platformexplorers.com/contribute.html.
 
-The website files are at the repository root. For branch-based publishing, use the `main` branch and `/(root)` as the Pages publishing source. Keep the custom domain set to `platformexplorers.com` in repository Settings > Pages. The root CNAME file contains the same domain. No build or package installation is needed.
+Each article lives in `blog/<slug>/index.md`, with its images in an `images/`
+folder beside it. Reusable author profiles are in `_blog/authors/`. Start with
+the templates in `_blog/templates/`. Submit your contribution through a pull
+request. Do not edit generated HTML.
 
-`.nojekyll` tells Pages to serve the static files directly.
+## Build and maintain
 
-## Preview
+The `Build blog and publish website` workflow validates pull requests. On `main`,
+it builds the blog and deploys the public website with GitHub Pages. The Pages
+source must be GitHub Actions. The custom domain remains platformexplorers.com.
 
-Run `python -m http.server 8080` from this repository and open http://localhost:8080.
+For a manual build, install Python 3.10 or newer, then run:
 
-## Editing
+```shell
+python -m pip install -r requirements-blog.txt
+python -m unittest discover -s tests -v
+python tools/build_blog.py
+```
 
-- `index.html`, `home.css`: homepage
-- `about.html`, `about.css`: About us and team/mentor cards
-- `contact.html`, `contact.css`: email, Discord, and social profiles
-- `partners.html`, `partners.css`: partnership opportunities
-- `styles.css`, `script.js`: shared styles and mobile navigation
-- `assets/`: logo, portraits, and placeholder assets
+The build generates `blog.html`, `contribute.html`, article HTML and sitemap entries.
+The guide webpage comes from `contribution.md`; maintainers' notes remain in the
+Markdown file only. Shared blog HTML templates are in `_blog/templates/` and
+styles are in `blog.css`. The deployment artifact excludes Markdown sources,
+tests and build tools. Blog dates are metadata; use `draft: true` to hide a post.
 
-Keep the existing relative links so pages and assets work on GitHub Pages. Canonical URLs and the sitemap use https://platformexplorers.com.
+The repository root contains the website files. In the owner's local project,
+these files live inside `dist/`, and `python dev.py --open` runs the live preview.

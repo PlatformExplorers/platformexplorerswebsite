@@ -1,31 +1,60 @@
-.donates-label{font-size:.875rem;font-weight:600;letter-spacing:0;margin:0 0 26px;color:var(--muted)}
-.donates-hero{display:grid;grid-template-columns:1.25fr 1fr;gap:75px;padding-top:70px;padding-bottom:75px;border-bottom:1px solid var(--line);align-items:center}
-.donates-hero h1{font-size:clamp(42px,4.4vw,66px);letter-spacing:-2.8px;line-height:1.12;margin-bottom:28px}
-.donates-hero-copy>p:not(.donates-label){font-size:1rem;line-height:1.85;color:var(--muted);max-width:540px}
-.donates-hero-copy>.donates-intro{color:var(--ink)!important;font-size:1.125rem!important}
-.donates-hero-copy .button{font-size:.9375rem;margin-top:14px}
-.donates-allocation{background:var(--green);padding:40px}
-.donates-logo-link{display:block;max-width:305px;margin:0 0 42px}
-.donates-logo-link img{display:block;width:100%;height:auto}
-.donates-licences{display:flex;align-items:center;gap:25px;padding-bottom:0}
-.donates-licences strong{font-family:Manrope,Arial,sans-serif;font-size:76px;line-height:1;letter-spacing:-4px;font-weight:500}
-.donates-licences span{font-size:.9375rem;line-height:1.65}
-.donates-allocation dl{margin:26px 0 0}.donates-allocation dl>div{margin-top:20px}.donates-allocation dt{font-size:.875rem;color:var(--muted);margin-bottom:6px}.donates-allocation dd{font-size:1rem;margin:0;line-height:1.6}
-.donates-learning{padding-top:75px;padding-bottom:70px}
-.donates-section-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:40px}
-.donates-section-intro h2{font-size:38px;margin-bottom:0}.donates-section-intro>p{font-size:1rem;color:var(--muted);line-height:1.85;max-width:490px;margin:3px 0 0}
-.donates-learning-list{border-top:1px solid var(--line)}.donates-learning-list article{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:26px 0;border-bottom:1px solid var(--line)}
-.donates-learning-list h3{font-size:21px;font-weight:500;letter-spacing:-.6px;line-height:1.5;margin:0}.donates-learning-list p{font-size:1rem;color:var(--muted);line-height:1.85;margin:0;max-width:520px}
-.donates-source{font-size:.875rem;line-height:1.7;color:var(--muted);margin:24px 0 0}.donates-source a,.donates-email,.donates-thanks p>a{text-decoration:underline;text-underline-offset:4px}
-.donates-apply{background:#e9eddf;padding:65px 0}.donates-apply-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.donates-apply h2{font-size:38px}.donates-apply-grid>div>p:not(.donates-label){font-size:1rem;line-height:1.85;color:var(--muted);max-width:475px;margin-bottom:0}
-.donates-application{padding-top:6px}.donates-application h3{font-size:24px;letter-spacing:-.7px;font-weight:500;margin-bottom:20px}.donates-application .button{margin-top:26px;font-size:.9375rem}.donates-email{display:block;width:fit-content;margin-top:24px;font-size:1rem;overflow-wrap:anywhere}
-.donates-faq{display:grid;grid-template-columns:1fr 1.5fr;gap:80px;padding-top:75px;padding-bottom:70px}.donates-faq>h2{font-size:32px;max-width:300px}.donates-faq .faq-list summary{font-size:1rem;padding:22px 0}.donates-faq .faq-list p{font-size:1rem;max-width:none;line-height:1.85}
-.donates-thanks{display:flex;justify-content:space-between;gap:40px;align-items:center;padding-top:26px;padding-bottom:30px;border-top:1px solid var(--line)}.donates-thanks>p{font-size:1rem;max-width:630px;line-height:1.8;margin:0}.donates-thanks .text-link{font-size:.875rem;flex-shrink:0}
+/* DataCamp registration: programme essentials, application, then questions. */
+.registration-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,1fr);gap:80px;align-items:start;padding-top:62px;padding-bottom:64px}
+.registration-label{font-size:.875rem;line-height:1.6;font-weight:500;color:var(--muted);margin:0 0 24px}
+.registration-intro h1{font-size:clamp(42px,4.4vw,64px);line-height:1.12;letter-spacing:-2.7px;font-weight:500;margin-bottom:26px}
+.registration-lead{font-size:1.1875rem;line-height:1.75;max-width:580px;margin-bottom:18px}
+.registration-description{font-size:1rem;line-height:1.8;color:var(--muted);max-width:530px;margin-bottom:26px}
+.registration-intro .button{font-size:1rem;padding:16px 25px;min-height:52px}
+.registration-summary{background:var(--green);padding:30px 32px;margin-top:4px}
+.registration-summary h2{font-size:1.125rem;font-weight:600;line-height:1.5;letter-spacing:-.3px;margin-bottom:24px}
+.registration-summary dl{margin:0;display:grid;gap:21px}
+.registration-summary dt{font-size:.875rem;line-height:1.5;color:var(--muted);margin-bottom:5px}
+.registration-summary dd{margin:0;font-size:1rem;font-weight:500;line-height:1.6}
+.registration-partner{margin-top:28px;padding-top:23px;border-top:1px solid #cdd3c3}
+.registration-partner p{font-size:.875rem;line-height:1.6;color:var(--muted);margin-bottom:16px}
+.registration-partner a{display:block;max-width:190px}.registration-partner img{display:block;width:100%;height:auto}
+.registration-apply{padding:45px 0 24px;background:#eef0e7;scroll-margin-top:25px}
+.application-heading{max-width:850px;margin:0 auto 25px}
+.application-heading h2{font-size:32px;letter-spacing:-1.2px;line-height:1.25;margin-bottom:16px}
+.application-heading p{font-size:1rem;line-height:1.85;color:var(--muted);max-width:720px;margin-bottom:12px}
+.application-heading .application-note{font-size:.875rem;line-height:1.7;margin-bottom:0}
+.datacamp-form-container{width:100%;max-width:850px;min-width:0;margin:0 auto}
+.datacamp-form-container iframe{display:block;width:100%;height:2300px;border:0;overflow:hidden}
+.application-help{max-width:850px;margin:15px auto 0;font-size:.875rem;line-height:1.8;color:var(--muted)}
+.application-help a{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.registration-faq{padding-top:42px;padding-bottom:55px}.registration-faq-inner{max-width:850px;margin:0 auto}
+.registration-faq h2{font-size:30px;letter-spacing:-1.1px;line-height:1.3;margin-bottom:25px}
+.registration-faq .faq-list summary{font-size:1rem;line-height:1.65;padding:22px 0}
+.registration-faq .faq-list p{font-size:1rem;line-height:1.85;max-width:720px}
+/* Partnership-page feature shares this stylesheet. */
 .datacamp-partner-feature{margin-top:42px;margin-bottom:46px;display:grid;grid-template-columns:1fr 1.6fr;gap:70px;align-items:center;padding:34px 38px;background:var(--green)}
 .datacamp-partner-feature img{width:100%;max-width:280px;height:auto;display:block}.datacamp-partner-feature h2{font-size:28px;margin:0 0 13px}.datacamp-partner-feature p{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:15px}.datacamp-partner-feature .text-link{font-size:.9375rem}
-@media(max-width:1100px){.donates-hero{gap:40px}.donates-allocation{padding:30px}.donates-licences{gap:18px}.donates-licences strong{font-size:66px}.donates-section-intro,.donates-learning-list article,.donates-apply-grid,.donates-faq{gap:45px}.donates-thanks{align-items:start;flex-direction:column;gap:13px}.datacamp-partner-feature{gap:40px}}
-@media(max-width:760px){.donates-hero{grid-template-columns:1fr;gap:35px;padding-top:42px;padding-bottom:44px}.donates-hero h1{font-size:43px;letter-spacing:-2px}.donates-label{margin-bottom:20px}.donates-hero-copy>.donates-intro{font-size:1.0625rem!important}.donates-allocation{padding:28px}.donates-logo-link{max-width:250px;margin-bottom:32px}.donates-licences strong{font-size:66px}.donates-learning{padding-top:46px;padding-bottom:44px}.donates-section-intro{grid-template-columns:1fr;gap:22px;margin-bottom:29px}.donates-section-intro h2,.donates-apply h2{font-size:31px}.donates-learning-list article{grid-template-columns:1fr;gap:12px;padding:23px 0}.donates-learning-list h3{font-size:20px}.donates-apply{padding:43px 0}.donates-apply-grid{grid-template-columns:1fr;gap:34px}.donates-application{padding-top:0}.donates-application h3{font-size:23px}.donates-faq{grid-template-columns:1fr;gap:23px;padding-top:46px;padding-bottom:44px}.donates-faq>h2{font-size:29px;max-width:none;margin-bottom:0}.donates-thanks{padding-top:23px;padding-bottom:26px}.donates-thanks .text-link{flex-shrink:1}.datacamp-partner-feature{grid-template-columns:1fr;padding:27px 24px;gap:28px;margin-top:30px;margin-bottom:32px}.datacamp-partner-feature img{max-width:250px}.datacamp-partner-feature h2{font-size:26px}}
+@media(max-width:1100px){.registration-hero{gap:40px;grid-template-columns:minmax(0,1.3fr) minmax(270px,1fr)}.registration-summary{padding:26px}.registration-intro h1{font-size:45px;letter-spacing:-1.8px}.registration-lead{font-size:1.0625rem}.datacamp-partner-feature{gap:40px}}
+@media(max-width:760px){.registration-hero{grid-template-columns:1fr;gap:30px;padding-top:38px;padding-bottom:40px}.registration-label{margin-bottom:19px}.registration-intro h1{font-size:clamp(35px,8.6vw,45px);letter-spacing:-1.7px;margin-bottom:22px}.registration-lead{font-size:1.0625rem;line-height:1.8}.registration-summary{padding:26px;margin-top:0}.registration-summary dl{grid-template-columns:1fr 1fr;gap:20px}.registration-summary dl>div:first-child{grid-column:1/-1}.registration-summary h2{margin-bottom:21px}.registration-summary dd{font-size:.9375rem}.registration-partner{margin-top:24px;padding-top:20px}.registration-partner a{max-width:180px}.registration-apply{padding-top:32px;padding-bottom:20px}.application-heading{margin-bottom:23px}.application-heading h2{font-size:28px}.registration-faq{padding-top:33px;padding-bottom:38px}.registration-faq h2{font-size:28px}.registration-faq .faq-list summary{padding:20px 0}.datacamp-partner-feature{grid-template-columns:1fr;padding:27px 24px;gap:28px;margin-top:30px;margin-bottom:32px}.datacamp-partner-feature img{max-width:250px}.datacamp-partner-feature h2{font-size:26px}}
+/* Keep the embed close to its content height, without a nested scrollbar. */
+@media(max-width:600px){.datacamp-form-container iframe{height:calc(3010px - 116.667vw)}}
+@media(max-width:480px){.datacamp-form-container iframe{height:calc(3730px - 266.667vw)}}
 
-.donates-allocation{display:grid;place-items:center;min-height:230px}.donates-logo-link{width:100%;max-width:340px;margin:0}
-@media(max-width:760px){.donates-allocation{min-height:180px}.donates-logo-link{max-width:280px}}
+/* Compact opening for the standalone scholarship registration page. */
+.registration-hero{gap:50px;padding-top:32px;padding-bottom:36px}
+.registration-intro h1{margin-bottom:19px}
+.registration-lead{margin-bottom:13px}
+.registration-description{margin-bottom:14px}
+.registration-intro>.registration-label{margin:18px 0 12px}
+.registration-summary{padding:24px 28px;margin-top:0}
+.registration-summary h2{margin-bottom:17px}
+.registration-summary dl{gap:14px}
+.registration-summary dt{margin-bottom:3px}
+.registration-partner{margin-top:18px;padding-top:16px}
+.registration-partner p{margin-bottom:12px}
+@media(max-width:760px){.registration-hero{gap:24px;padding-top:26px;padding-bottom:28px}.registration-summary{padding:23px}.registration-summary dl{gap:14px 20px}.registration-intro>.registration-label{margin-top:15px}.registration-partner{margin-top:18px;padding-top:15px}}
+
+.scholarship-summary-group{min-width:0}
+.scholarship-logos{display:flex;justify-content:center;align-items:center;gap:24px;padding-top:24px}
+.scholarship-brand-pe{display:flex;align-items:center;gap:5px;min-width:0}
+.scholarship-brand-pe .logo-crop{display:block;flex-shrink:0;width:30px;height:39px}
+.scholarship-brand-pe .logo-crop img{width:115px;height:115px;left:-43px;top:-30px}
+.scholarship-brand-name{font-size:13px;font-weight:700;letter-spacing:1.2px;line-height:1.1}
+.scholarship-brand-name>span{display:block;font-size:7px;letter-spacing:3.4px;margin:5px 0 0 2px}
+.scholarship-brand-datacamp{display:block;width:145px;max-width:45%;height:auto}
+@media(max-width:360px){.scholarship-logos{gap:16px}.scholarship-brand-name{font-size:11px}.scholarship-brand-name>span{font-size:6px;letter-spacing:2.8px}}

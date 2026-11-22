@@ -1,0 +1,6 @@
+name: "Your full name"
+bio: "Write 2–3 sentences about yourself, your work or interests, and your connection to this topic. This appears at the end of every article you contribute."
+# Optional: upload a portrait to assets/blog/ and supply its path.
+image: ""
+# Optional: a public HTTPS profile or website. Leave blank to omit.
+website: ""

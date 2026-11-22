@@ -1,0 +1,67 @@
+name: Build blog and publish website
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-blog.txt
+      - run: python -m pip install -r requirements-blog.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/build_blog.py
+      - name: Package public website only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          root = Path('.')
+          out = Path('_site')
+          out.mkdir(exist_ok=True)
+          excluded = {'.git', '.github', '_blog', '_site', 'tools', 'tests', '__pycache__'}
+          for path in root.iterdir():
+              if path.name in excluded or path.suffix == '.md' or path.name == 'requirements-blog.txt':
+                  continue
+              if path.is_dir():
+                  shutil.copytree(path, out / path.name, dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.md', '__pycache__'))
+              else:
+                  shutil.copy2(path, out / path.name)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website-preview
+          path: _site
+          include-hidden-files: true
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' && github.repository == 'PlatformExplorers/platformexplorerswebsite'
+        with:
+          path: _site
+  deploy:
+    if: github.event_name != 'pull_request' && github.repository == 'PlatformExplorers/platformexplorerswebsite'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

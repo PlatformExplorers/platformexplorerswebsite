@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3">
+  <title>Contribute a blog | Platform Explorers</title>
+  <meta name="description" content="How to contribute a blog using VS Code or GitHub: fork the repository, add your article and author profile, and open a pull request.">
+  <link rel="canonical" href="https://platformexplorers.com/contribute.html">
+  <meta property="og:site_name" content="Platform Explorers">
+  <meta property="og:title" content="Contribute a blog | Platform Explorers">
+  <meta property="og:description" content="How to contribute a blog using VS Code or GitHub: fork the repository, add your article and author profile, and open a pull request.">
+  <meta property="og:url" content="https://platformexplorers.com/contribute.html">
+  
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+<header class="header">
+    <a class="brand" href="/index.html" aria-label="Platform Explorers home"><span class="logo-crop"><img src="/assets/logo.jpg" alt=""></span><span>PLATFORM<span class="brand-small">EXPLORERS</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>＋</span></button>
+    <nav id="navigation" aria-label="Main navigation"><a href="/index.html">Home</a><a href="/about.html">About us</a><a href="/blog.html" aria-current="page">Blog</a><a href="/partners.html">Partner with us</a><a href="/contact.html">Contact</a><a class="nav-cta" href="/index.html#get-involved">Get involved </a></nav>
+  </header>
+<main id="main"><article class="contribution-guide wrap"><a class="blog-back" href="/blog.html">All articles</a><header class="article-heading"><h1>Contribute a blog</h1></header><nav class="guide-jumps" aria-label="Contribution guide sections"><a href="#what-you-need">What you need</a><a href="#option-a-contribute-using-vs-code">Using VS Code</a><a href="#option-b-contribute-directly-on-github">Using GitHub</a><a href="#open-a-pull-request-both-methods">Open a pull request</a></nav><div class="article-body"><p>We welcome practical guides, project stories and experiences from our community.
+You can contribute using <strong>VS Code on your computer</strong> or <strong>GitHub in your browser</strong>.
+Both methods use a fork, a separate branch and a pull request for team review.</p>
+<p>A <strong>fork</strong> is your copy of this repository. A <strong>branch</strong> keeps your article's edits
+together. A <strong>pull request (PR)</strong> asks the Platform Explorers team to review those
+edits and add them to the website.</p>
+<h2 id="what-you-need">What you need</h2>
+<p>For either method:</p>
+<ul>
+<li>A free <a href="https://github.com/signup">GitHub account</a>.</li>
+<li>Your article, a title, a short summary and your author bio for your first post.</li>
+<li>Any images you want to use, with permission to publish them and descriptive alt text.</li>
+</ul>
+<p>For the VS Code method, install these if you don’t already have them:</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">Git</a>.</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>.</li>
+</ul>
+<p>After installing Git, close and reopen VS Code so its terminal can find Git.
+The GitHub-only method needs no local software installation.</p>
+<h2 id="where-your-files-go">Where your files go</h2>
+<p>Start from the main repository folder. Replace <code>your-article-title</code> and
+<code>your-name</code> with your own names.</p>
+<table>
+<thead>
+<tr>
+<th>What you are adding</th>
+<th>Where to save it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Your article</td>
+<td><code>blog/your-article-title/index.md</code></td>
+</tr>
+<tr>
+<td>Cover image, if used</td>
+<td><code>blog/your-article-title/images/cover.webp</code></td>
+</tr>
+<tr>
+<td>Screenshots or other article images</td>
+<td><code>blog/your-article-title/images/</code></td>
+</tr>
+<tr>
+<td>Your author profile (first contribution only)</td>
+<td><code>_blog/authors/your-name.yml</code></td>
+</tr>
+</tbody>
+</table>
+<p>Copy the article template from
+<a href="https://github.com/PlatformExplorers/platformexplorerswebsite/blob/main/_blog/templates/post-template.md"><code>_blog/templates/post-template.md</code></a>.
+For your first contribution, also copy the
+<a href="https://github.com/PlatformExplorers/platformexplorerswebsite/blob/main/_blog/templates/author-template.yml">author template</a>.</p>
+<p>The build updates <code>blog.html</code> automatically when articles are published.</p>
+<p>Create one folder in <code>blog/</code> for your article. Its name must match the post's
+<code>slug</code>, using lowercase words separated by hyphens. For example,
+<code>blog/my-first-automation/index.md</code> uses <code>slug: "my-first-automation"</code>.
+The public URL will be <code>https://platformexplorers.com/blog/my-first-automation/</code>.</p>
+<p>Put your article text in <code>index.md</code> and its images in that article's <code>images/</code>
+folder. You do not need an images folder if the article has no images. Do not edit
+<code>blog.html</code> or the generated <code>index.html</code> inside an article folder.</p>
+<h2 id="option-a-contribute-using-vs-code">Option A: contribute using VS Code</h2>
+<h3 id="1-fork-the-repository">1. Fork the repository</h3>
+<ol>
+<li>Sign in to GitHub and open
+   <a href="https://github.com/PlatformExplorers/platformexplorerswebsite">PlatformExplorers/platformexplorerswebsite</a>.</li>
+<li>Select <strong>Fork</strong>, choose your own account and select <strong>Create fork</strong>.</li>
+<li>Your fork should have an address like
+   <code>https://github.com/YOUR-USERNAME/platformexplorerswebsite</code>.</li>
+</ol>
+<p>If you already have a fork, open it, select <strong>Sync fork</strong>, then <strong>Update branch</strong>
+before starting a new contribution.</p>
+<h3 id="2-copy-your-fork-to-your-computer">2. Copy your fork to your computer</h3>
+<ol>
+<li>In <strong>your fork</strong> on GitHub, select <strong>Code</strong>, then <strong>HTTPS</strong>, and copy the URL.</li>
+<li>Open <strong>Visual Studio Code</strong>.</li>
+<li>In the top menu, select <strong>Terminal &gt; New Terminal</strong>. A terminal opens at the
+   bottom of VS Code.</li>
+<li>Type <code>git clone</code>, add a space, paste the URL you copied, then press <strong>Enter</strong>.
+   Your command should look like this, with your own GitHub username:</li>
+</ol>
+<pre><code class="language-shell">git clone https://github.com/YOUR-USERNAME/platformexplorerswebsite.git
+</code></pre>
+<ol start="5">
+<li>Wait for the download to finish. Git creates a folder called
+   <code>platformexplorerswebsite</code> in the location shown in your terminal. If you need
+   the full location, type <code>pwd</code> and press <strong>Enter</strong>. Your new folder is inside
+   the location it prints.</li>
+<li>Select <strong>File &gt; Open Folder</strong>. Find and open that new <code>platformexplorerswebsite</code>
+   folder. You should now see the website files in VS Code's Explorer on the left.</li>
+</ol>
+<h3 id="3-create-a-branch-for-your-article">3. Create a branch for your article</h3>
+<ol>
+<li>Select <strong>Terminal &gt; New Terminal</strong> in the project you just opened.</li>
+<li>Type the command below and press <strong>Enter</strong>:</li>
+</ol>
+<pre><code class="language-shell">git switch -c blog/my-first-automation
+</code></pre>
+<ol start="3">
+<li>This creates a separate branch for your article and switches you to it.
+   Use your own article name in place of <code>my-first-automation</code>. Use that same
+   name in the folder and commands below.</li>
+</ol>
+<h3 id="4-create-your-article-folder-and-markdown-file">4. Create your article folder and Markdown file</h3>
+<ol>
+<li>In VS Code's Explorer, right-click <code>blog</code> and select <strong>New Folder</strong>.</li>
+<li>Name it <code>my-first-automation</code> (replace this with your own slug).</li>
+<li>Inside it, create an <code>images</code> folder if you have images. Drag your images into it.</li>
+<li>Open <code>_blog/templates/post-template.md</code> in the Explorer and copy its contents.</li>
+<li>Right-click your article folder, select <strong>New File</strong>, name it <code>index.md</code> and
+   paste the template into it.</li>
+<li>Replace the template's metadata and example content with your own article.
+   See <strong>Article metadata and images</strong> below.</li>
+</ol>
+<h3 id="5-add-your-author-profile">5. Add your author profile</h3>
+<ol>
+<li>Open <code>_blog/templates/author-template.yml</code> in the Explorer and copy its contents.</li>
+<li>Right-click <code>_blog/authors</code>, select <strong>New File</strong>, and name it <code>your-name.yml</code>.
+   Replace <code>your-name</code> with your name in lowercase, with hyphens instead of spaces.</li>
+<li>Paste the template and fill in your full name and a short bio.</li>
+<li>In your article, set <code>authorId</code> to that filename without <code>.yml</code>. Set <code>author</code>
+   to the exact name in your profile.</li>
+</ol>
+<p>Do this for your first contribution only. For later articles, reuse your existing
+profile. See <strong>Your author profile</strong> below for an example.</p>
+<h3 id="6-check-your-article">6. Check your article</h3>
+<ol>
+<li>Save your files using <strong>File &gt; Save All</strong>.</li>
+<li>Open your article's <code>index.md</code> file.</li>
+<li>Select the <strong>Open Preview to the Side</strong> icon at the top-right of the editor.
+   It opens a formatted preview beside your Markdown.</li>
+<li>Read through your article. Check the headings, links, spelling and images.</li>
+<li>Set <code>draft: false</code> in the metadata when your article is ready for review.
+   Keep <code>draft: true</code> if you are still working on it.</li>
+</ol>
+<p>This preview shows your Markdown formatting. The website adds its own design,
+the title, the byline and your author bio when the article is built.</p>
+<h3 id="7-save-your-changes-to-github">7. Save your changes to GitHub</h3>
+<p>In the VS Code terminal, run each command below separately. Press <strong>Enter</strong> after
+each command and wait for it to finish. Replace the example article and author
+names with your own.</p>
+<p>First, select your article folder and its images:</p>
+<pre><code class="language-shell">git add blog/my-first-automation/
+</code></pre>
+<p>Select your author profile too, if you created or changed it:</p>
+<pre><code class="language-shell">git add _blog/authors/your-name.yml
+</code></pre>
+<p>Save these changes with a short message:</p>
+<pre><code class="language-shell">git commit -m &quot;Blog: add my first automation article&quot;
+</code></pre>
+<p>Upload your branch to your fork on GitHub:</p>
+<pre><code class="language-shell">git push -u origin blog/my-first-automation
+</code></pre>
+<p>Sign in to GitHub if asked. Wait for the upload to finish, then open your fork
+in your browser. Your article branch and files should now be there.</p>
+<p>If Git asks for your name and email before it can commit, run these commands with
+your own details, then retry the <code>git commit</code> command:</p>
+<pre><code class="language-shell">git config user.name &quot;Your Name&quot;
+git config user.email &quot;your-github-email@example.com&quot;
+</code></pre>
+<p>Use an email connected to your GitHub account, or the no-reply email shown in
+your GitHub email settings. These details are attached to your commits.</p>
+<h3 id="8-create-your-pull-request">8. Create your pull request</h3>
+<p>Follow <strong>Open a pull request</strong> below. Pushing to your fork alone does not submit
+the article to Platform Explorers.</p>
+<h2 id="option-b-contribute-directly-on-github">Option B: contribute directly on GitHub</h2>
+<h3 id="1-fork-and-create-a-branch">1. Fork and create a branch</h3>
+<ol>
+<li>Sign in and <a href="https://github.com/PlatformExplorers/platformexplorerswebsite/fork">fork the repository</a>.
+   If you already have a fork, sync its <code>main</code> branch first.</li>
+<li>In <strong>your fork</strong>, open the branch dropdown that currently says <code>main</code>.</li>
+<li>Enter <code>blog/my-first-automation</code>, then choose the option to create that branch
+   from <code>main</code>. Use your own article name.</li>
+<li>Check that this branch is selected before adding files. Stay on it throughout
+   your contribution.</li>
+</ol>
+<h3 id="2-create-the-article-folder-and-markdown-file">2. Create the article folder and Markdown file</h3>
+<ol>
+<li>Open <a href="https://github.com/PlatformExplorers/platformexplorerswebsite/blob/main/_blog/templates/post-template.md"><code>_blog/templates/post-template.md</code></a>
+   in another tab and copy its contents.</li>
+<li>Return to the root of <strong>your fork</strong>, on your new branch.</li>
+<li>Select <strong>Add file → Create new file</strong>.</li>
+<li>In the filename field, enter <code>blog/my-first-automation/index.md</code>.
+   GitHub creates the folders when you type the <code>/</code> characters.</li>
+<li>Paste the template, replace the metadata and write your article.</li>
+<li>Use <strong>Preview</strong> to check the Markdown formatting.</li>
+<li>Select <strong>Commit changes</strong>, enter a clear message and commit to your article
+   branch. Do not create a different branch for each file.</li>
+</ol>
+<h3 id="3-upload-your-images">3. Upload your images</h3>
+<p>Skip this step if your article has no images.</p>
+<ol>
+<li>Open your new <code>blog/my-first-automation/</code> folder in your fork.</li>
+<li>To create its images folder, use <strong>Add file → Create new file</strong>, enter
+   <code>images/.gitkeep</code> and commit this empty placeholder to the same branch.</li>
+<li>Open <code>images/</code>, select <strong>Add file → Upload files</strong>, then drag in your images.</li>
+<li>Commit the upload to the same branch. You can leave <code>.gitkeep</code> in the folder;
+   it does not appear in your article.</li>
+<li>Back in <code>index.md</code>, use <code>./images/filename.webp</code> for both the cover and inline
+   images. See the examples below.</li>
+</ol>
+<h3 id="4-add-your-author-profile-first-contribution-only">4. Add your author profile (first contribution only)</h3>
+<ol>
+<li>Copy <a href="https://github.com/PlatformExplorers/platformexplorerswebsite/blob/main/_blog/templates/author-template.yml"><code>_blog/templates/author-template.yml</code></a>.</li>
+<li>At your fork's root, use <strong>Add file → Create new file</strong> and enter
+   <code>_blog/authors/your-name.yml</code>.</li>
+<li>Paste the template, fill in your name and bio, and commit to the same article branch.</li>
+<li>Check <code>author</code> in <code>index.md</code> matches your profile's <code>name</code>, and <code>authorId</code>
+   matches the profile filename without <code>.yml</code>.</li>
+</ol>
+<p>You can edit any file again using its pencil/edit button, then commit the changes
+to this same branch. No terminal, local clone or Python installation is needed.</p>
+<h2 id="your-author-profile">Your author profile</h2>
+<p>Complete this once, on your first contribution:</p>
+<pre><code class="language-yaml">name: &quot;Your full name&quot;
+bio: &quot;Two or three sentences about your work, interests and experience with your topic.&quot;
+image: &quot;&quot;
+website: &quot;&quot;
+</code></pre>
+<p>Save it as <code>_blog/authors/your-name.yml</code>. In the article, use:</p>
+<pre><code class="language-yaml">author: &quot;Your full name&quot;
+authorId: &quot;your-name&quot;
+</code></pre>
+<p>The website adds <strong>Written by</strong> near the top of your article and <strong>About the author</strong>
+with your bio at the end. Reuse the same <code>authorId</code> for future posts. You may update
+your profile in a later PR. A public HTTPS profile link and portrait are optional.
+For a reusable portrait, upload it to <code>assets/blog/</code> and use, for example,
+<code>image: "/assets/blog/your-name.webp"</code>. Leave optional fields empty to omit them.
+Only include information you want to appear publicly.</p>
+<h2 id="article-metadata-and-images">Article metadata and images</h2>
+<p>Keep the metadata between the two <code>---</code> lines at the start of <code>index.md</code>.
+Set <code>slug</code> to the article folder name. These must match. For a local image:</p>
+<pre><code class="language-yaml">slug: &quot;my-first-automation&quot;
+image: &quot;./images/cover.webp&quot;
+imageAlt: &quot;Describe what the cover image shows&quot;
+</code></pre>
+<p>To insert an image in the article body:</p>
+<pre><code class="language-markdown">![Describe what the reader needs to know](./images/example-screenshot.png)
+</code></pre>
+<p>Use lowercase, hyphenated filenames. Supported image formats are JPG, JPEG, PNG,
+WebP and GIF; aim for under 500 KB per image. Keep image paths inside your article's
+<code>images/</code> folder. Do not use paths from your computer such as <code>C:\Users\...</code>.
+If you do not need a cover, keep <code>image: ""</code> and <code>imageAlt: ""</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>The visible article headline.</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>Unique lowercase words separated by hyphens. Becomes <code>/blog/your-slug/</code>. Keep it unchanged after publication so existing links keep working.</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Your full name, exactly as it appears in your author profile.</td>
+</tr>
+<tr>
+<td><code>authorId</code></td>
+<td>Your profile filename without <code>.yml</code>, for example <code>rachel-irabor</code>.</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Original publication date in quoted <code>YYYY-MM-DD</code> format.</td>
+</tr>
+<tr>
+<td><code>lastModified</code></td>
+<td>Date of the latest edit, on or after <code>date</code>.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Short introduction displayed at the top of the article.</td>
+</tr>
+<tr>
+<td><code>excerpt</code></td>
+<td>Summary displayed on the blog listing.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>One clear topic, such as Automation, Career or Community.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>A list such as <code>["Power Automate", "SharePoint"]</code>.</td>
+</tr>
+<tr>
+<td><code>featured</code></td>
+<td><code>true</code> to show a Featured label; otherwise <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td><code>true</code> hides the post from the public site. Set <code>false</code> when ready for review and publication.</td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>Optional cover image, e.g. <code>./images/cover.webp</code>. Leave <code>""</code> to omit.</td>
+</tr>
+<tr>
+<td><code>imageAlt</code></td>
+<td>Describe the cover image for readers who cannot see it. Required when an image is supplied.</td>
+</tr>
+<tr>
+<td><code>seoTitle</code></td>
+<td>Search and browser title, usually your headline plus Platform Explorers.</td>
+</tr>
+<tr>
+<td><code>seoDescription</code></td>
+<td>A concise, accurate summary for search engines and shared links.</td>
+</tr>
+</tbody>
+</table>
+<p>Write sections with <code>## Heading</code> and subsections with <code>### Heading</code>. Do not repeat
+the article title, byline or author bio in the body; the website adds them.
+Use descriptive links, readable paragraphs, lists and fenced code blocks where
+helpful. Use Markdown rather than raw HTML. Scripts, iframes, forms and unsafe
+links are removed during the build.</p>
+<p>Credit sources and any images that require attribution. Check facts and links,
+and remove credentials or private information from examples and screenshots.</p>
+<h2 id="open-a-pull-request-both-methods">Open a pull request (both methods)</h2>
+<ol>
+<li>Open <strong>your fork</strong> on GitHub and choose your article branch.</li>
+<li>Select <strong>Contribute → Open pull request</strong> or <strong>Compare &amp; pull request</strong>.
+   If neither appears, use <strong>Pull requests → New pull request → compare across forks</strong>.</li>
+<li>
+<p>Confirm these settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base repository</td>
+<td><code>PlatformExplorers/platformexplorerswebsite</code></td>
+</tr>
+<tr>
+<td>Base branch</td>
+<td><code>main</code></td>
+</tr>
+<tr>
+<td>Head repository</td>
+<td>Your fork</td>
+</tr>
+<tr>
+<td>Compare branch</td>
+<td><code>blog/my-first-automation</code> (your article branch)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Review the files shown in the comparison. Include your article, its images
+   and your author profile if new or changed. Do not include unrelated changes.</p>
+</li>
+<li>Add a title such as <code>Blog: My first automation</code> and a short description.</li>
+<li>Complete the PR checklist. Confirm <code>draft: false</code> for a ready article, or keep
+   <code>draft: true</code> and create a draft PR if you still want feedback.</li>
+<li>Select <strong>Create pull request</strong>. A Platform Explorers maintainer will review it.</li>
+</ol>
+<p>Watch the PR's checks and comments. If a check fails, open its build log and find
+the filename and error. Fix the file on <strong>the same branch</strong> in VS Code or GitHub,
+commit and push/save. The existing PR updates automatically; do not open another.
+If this is your first contribution, a maintainer may need to approve the automated
+checks before they run.</p>
+<p>Opening a PR does not publish your article. After a maintainer approves and merges
+a ready post, the build creates its HTML page, updates <code>blog.html</code> and the sitemap,
+and deploys the website. A draft remains hidden. Keep an existing post's slug
+unchanged so its published links continue working.</p>
+<h2 id="before-you-submit">Before you submit</h2>
+<ul>
+<li>[ ] My article is <code>blog/my-article/index.md</code> and the folder matches its <code>slug</code>.</li>
+<li>[ ] I used the post template and filled in every required metadata field.</li>
+<li>[ ] I added or reused an author profile with a publication-ready bio.</li>
+<li>[ ] My images are in my article's <code>images/</code> folder, with working paths and alt text.</li>
+<li>[ ] I have permission to publish the content and images, and credited sources.</li>
+<li>[ ] I checked formatting, links and private information.</li>
+<li>[ ] I set <code>draft</code> correctly and included only the intended files in my PR.</li>
+</ul>
+<h2 id="further-help">Further help</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/sourcecontrol/repos-remotes">VS Code: cloning repositories</a></li>
+<li><a href="https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees">VS Code: branches and publishing a branch</a></li>
+<li><a href="https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork">GitHub: opening a pull request from a fork</a></li>
+</ul></div></article></main>
+<footer class="wrap"><div class="footer-left"><a class="footer-logo" href="/index.html" aria-label="Platform Explorers home"><img src="/assets/logo.jpg" alt="Platform Explorers" width="500" height="500"></a><p>Building confidence, experience, and careers.</p><a class="footer-email" href="mailto:info@platformexplorers.com">info@platformexplorers.com</a><nav class="footer-socials" aria-label="Social media"><a href="https://x.com/platexplorers" target="_blank" rel="noopener noreferrer">Twitter / X</a><a href="https://www.instagram.com/platform_explorers/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://discord.gg/9USF3U8Ch" target="_blank" rel="noopener noreferrer">Discord</a><a href="https://www.linkedin.com/company/platform-explorers/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></div><div class="footer-right"><nav class="footer-links" aria-label="Footer navigation"><a href="/index.html">Home</a><a href="/about.html">About us</a><a href="/blog.html" aria-current="page">Blog</a><a href="/scholarship/">DataCamp programme</a><a href="/partners.html">Partner with us</a><a href="/contact.html">Contact</a></nav><span>© <span id="year">2026</span> Platform Explorers</span><span>A registered nonprofit company in Ireland.</span></div></footer>
+</body>
+</html>

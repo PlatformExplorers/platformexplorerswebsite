@@ -13,3 +13,19 @@
 .logo-crop{height:56px}.logo-crop img{clip-path:inset(0 0 39% 0)}@media(max-width:760px){.logo-crop{height:49px}}
 
 @media(min-width:761px){.experience-grid h3{margin-top:26px}}
+
+.footer-left{min-width:0}
+.footer-socials{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:20px;font-size:12px;color:var(--ink)}
+.footer-socials a:hover{color:var(--blue)}
+.footer-right{min-width:0}
+@media(max-width:760px){.footer-right{align-items:flex-end;text-align:right;width:100%}.footer-right .footer-links{justify-content:flex-end}.footer-right>a{overflow-wrap:anywhere;max-width:100%}}
+
+.footer-logo{display:block;position:relative;width:164px;height:148px;overflow:hidden;mix-blend-mode:multiply}
+.footer-logo img{position:absolute;display:block;width:300px;height:300px;max-width:none;left:-69px;top:-78px}
+.footer-right .footer-links{display:grid;grid-template-columns:repeat(2,max-content);gap:14px 30px;text-align:left;margin:4px 0 16px}
+@media(max-width:760px){.footer-right .footer-links{gap:14px 24px}}
+
+.footer-email{display:block;width:fit-content;max-width:100%;margin-top:18px;font-size:14px;line-height:1.7;overflow-wrap:anywhere}.footer-email:hover{color:var(--blue)}
+
+/* Keep the expanded navigation comfortable on smaller laptop screens. */
+@media(min-width:761px) and (max-width:1100px){.header{padding-left:36px;padding-right:36px}.header nav{gap:16px;font-size:13px}.nav-cta{padding:12px}.brand{font-size:17px}.brand-small{font-size:9px}}

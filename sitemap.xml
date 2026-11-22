@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://platformexplorers.com/about.html</loc>
@@ -12,5 +12,13 @@
   <url>
     <loc>https://platformexplorers.com/partners.html</loc>
   </url>
-  <url><loc>https://platformexplorers.com/datacamp.html</loc></url>
+  <url>
+    <loc>https://platformexplorers.com/scholarship/</loc>
+  </url>
+  <url>
+    <loc>https://platformexplorers.com/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://platformexplorers.com/contribute.html</loc>
+  </url>
 </urlset>
