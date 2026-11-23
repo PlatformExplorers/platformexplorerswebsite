@@ -1,20 +1,45 @@
 # Contribute a blog to Platform Explorers
 
 We welcome practical guides, project stories and experiences from our community.
-You can contribute using **VS Code on your computer** or **GitHub in your browser**.
-Both methods use a fork, a separate branch and a pull request for team review.
+You can contribute by **emailing a Word document**, using **VS Code on your computer**,
+or writing directly on **GitHub in your browser**.
+
+Choose the option that works best for you below.
+
+## What you need
+
+For all three options:
+
+- Your article, a title, a short summary and your author bio.
+- Any images you want to use, with permission to publish them and descriptive alt text.
+
+## Option A: contribute by email
+
+Send us your article, blog or project write-up as a Word document. You do not
+need a GitHub account, fork, branch or pull request for this option.
+
+1. Write your article, blog or project write-up in a **Word document (.docx)**.
+2. Include **all images used in the write-up inside the document**, placed beside
+   the text they relate to.
+3. Add **your name and a short author bio** at the end of the document.
+4. Attach the Word document to an email and send it to  
+   [info@platformexplorers.com](mailto:info@platformexplorers.com?subject=Blog%20Contribution)
+5. Use **Blog Contribution** as the email subject.
+
+**To:** info@platformexplorers.com  
+**Subject:** Blog Contribution
+
+## For VS Code and GitHub: fork the repository
 
 A **fork** is your copy of this repository. A **branch** keeps your article's edits
 together. A **pull request (PR)** asks the Platform Explorers team to review those
 edits and add them to the website.
 
-## What you need
+The screenshots use a tutorial fork and sample article. Use your own account,
+article name and author details. Select an image to view it at full size.
 
-For either method:
-
-- A free [GitHub account](https://github.com/signup).
-- Your article, a title, a short summary and your author bio for your first post.
-- Any images you want to use, with permission to publish them and descriptive alt text.
+For the VS Code and GitHub options, you also need a free
+[GitHub account](https://github.com/signup).
 
 For the VS Code method, install these if you don’t already have them:
 
@@ -24,37 +49,8 @@ For the VS Code method, install these if you don’t already have them:
 After installing Git, close and reopen VS Code so its terminal can find Git.
 The GitHub-only method needs no local software installation.
 
-## Where your files go
-
-Start from the main repository folder. Replace `your-article-title` and
-`your-name` with your own names.
-
-| What you are adding | Where to save it |
-| --- | --- |
-| Your article | `blog/your-article-title/index.md` |
-| Cover image, if used | `blog/your-article-title/images/cover.webp` |
-| Screenshots or other article images | `blog/your-article-title/images/` |
-| Your author profile (first contribution only) | `_blog/authors/your-name.yml` |
-
-Copy the article template from
-[`_blog/templates/post-template.md`](_blog/templates/post-template.md).
-For your first contribution, also copy the
-[author template](_blog/templates/author-template.yml).
-
-The build updates `blog.html` automatically when articles are published.
-
-Create one folder in `blog/` for your article. Its name must match the post's
-`slug`, using lowercase words separated by hyphens. For example,
-`blog/my-first-automation/index.md` uses `slug: "my-first-automation"`.
-The public URL will be `https://platformexplorers.com/blog/my-first-automation/`.
-
-Put your article text in `index.md` and its images in that article's `images/`
-folder. You do not need an images folder if the article has no images. Do not edit
-`blog.html` or the generated `index.html` inside an article folder.
-
-## Option A: contribute using VS Code
-
-### 1. Fork the repository
+Complete this setup for the VS Code or GitHub option.
+Email contributors only need the email instructions above.
 
 1. Sign in to GitHub and open
    [PlatformExplorers/platformexplorerswebsite](https://github.com/PlatformExplorers/platformexplorerswebsite).
@@ -65,110 +61,248 @@ folder. You do not need an images folder if the article has no images. Do not ed
 If you already have a fork, open it, select **Sync fork**, then **Update branch**
 before starting a new contribution.
 
-### 2. Copy your fork to your computer
 
-1. In **your fork** on GitHub, select **Code**, then **HTTPS**, and copy the URL.
-2. Open **Visual Studio Code**.
-3. In the top menu, select **Terminal > New Terminal**. A terminal opens at the
-   bottom of VS Code.
-4. Type `git clone`, add a space, paste the URL you copied, then press **Enter**.
-   Your command should look like this, with your own GitHub username:
+
+[![Platform Explorers repository with the Fork button at the top right](assets/contribution/repository.webp)](assets/contribution/repository.webp)
+
+*Open the Platform Explorers repository and select Fork.*
+
+
+[![Create a new fork page with the owner, repository name and Create fork button](assets/contribution/fork-setup.webp)](assets/contribution/fork-setup.webp)
+
+*Choose your account as the owner, keep the repository name and select Create fork.*
+
+
+[![A personal fork showing its source repository and the main branch](assets/contribution/fork-created.webp)](assets/contribution/fork-created.webp)
+
+*Your copy shows your username and a link back to the original repository.*
+
+Choose the VS Code or GitHub option below to continue from your fork.
+
+## Option B: contribute using VS Code
+
+Start after creating your fork in the shared setup above. These screenshots use
+`my-first-automation` for the article and `example-contributor` for the author
+profile. Replace them with your own names throughout.
+
+### 1. Copy your fork to your computer
+
+1. In **your fork** on GitHub, select **Code**, choose **HTTPS** and copy the URL.
+
+[![Code menu on the personal fork showing the HTTPS clone URL and copy button](assets/contribution/copy-clone-url.webp)](assets/contribution/copy-clone-url.webp)
+
+*Copy the URL from your own fork, not the Platform Explorers repository.*
+
+2. Open **Visual Studio Code**. Select **File > New Window** so you can work in
+   a separate window.
+3. In that new window, select **Terminal > New Terminal**. The terminal opens
+   at the bottom of VS Code. If Terminal is hidden in the top menu, select
+   **...** to find it.
+
+[![VS Code Terminal menu with New Terminal at the top](assets/contribution/vscode-terminal-menu.webp)](assets/contribution/vscode-terminal-menu.webp)
+
+*Select Terminal, then New Terminal. This is where you enter the commands below.*
+
+4. In the terminal, type `git clone`, add a space, paste the URL you copied,
+   then press **Enter**. Replace `YOUR-USERNAME` with your GitHub username:
 
    ```shell
    git clone https://github.com/YOUR-USERNAME/platformexplorerswebsite.git
    ```
 
-5. Wait for the download to finish. Git creates a folder called
-   `platformexplorerswebsite` in the location shown in your terminal. If you need
-   the full location, type `pwd` and press **Enter**. Your new folder is inside
-   the location it prints.
-6. Select **File > Open Folder**. Find and open that new `platformexplorerswebsite`
-   folder. You should now see the website files in VS Code's Explorer on the left.
+5. Wait until the command finishes and the terminal prompt returns. Git creates
+   a folder named `platformexplorerswebsite` inside the terminal's current
+   location. To see that location, type `pwd` and press **Enter**.
+6. Select **File > Open Folder**. Browse to the location from step 5, open
+   `platformexplorerswebsite`, then select **Select Folder** on Windows
+   (**Open** on macOS). Open the whole repository folder, not just `blog`.
 
-### 3. Create a branch for your article
+[![Open Folder dialog showing the cloned platformexplorerswebsite folder and Select Folder button](assets/contribution/vscode-open-project.webp)](assets/contribution/vscode-open-project.webp)
 
-1. Select **Terminal > New Terminal** in the project you just opened.
+*Select the cloned platformexplorerswebsite folder. Its files will appear in the Explorer on the left.*
+
+### 2. Create a branch for your article
+
+1. With the repository open, select **Terminal > New Terminal** again. This
+   terminal should open inside `platformexplorerswebsite`.
 2. Type the command below and press **Enter**:
 
    ```shell
    git switch -c blog/my-first-automation
    ```
 
-3. This creates a separate branch for your article and switches you to it.
-   Use your own article name in place of `my-first-automation`. Use that same
-   name in the folder and commands below.
+3. Wait for `Switched to a new branch` in the terminal. The branch name also
+   appears at the bottom-left of VS Code. Use your own article name instead of
+   `my-first-automation`, and use that same name in the folder and commands below.
 
-### 4. Create your article folder and Markdown file
+To make room for writing, select the **Hide Panel (×)** button at the top-right
+of the terminal panel. Open a terminal again from **Terminal > New Terminal**
+when you reach step 6.
 
-1. In VS Code's Explorer, right-click `blog` and select **New Folder**.
-2. Name it `my-first-automation` (replace this with your own slug).
-3. Inside it, create an `images` folder if you have images. Drag your images into it.
-4. Open `_blog/templates/post-template.md` in the Explorer and copy its contents.
-5. Right-click your article folder, select **New File**, name it `index.md` and
-   paste the template into it.
-6. Replace the template's metadata and example content with your own article.
-   See **Article metadata and images** below.
+### 3. Create your article folder and Markdown file
 
-### 5. Add your author profile
+1. Select **Explorer** in the left activity bar if the file list is hidden.
+2. Right-click the **blog** folder and select **New Folder**. Use `blog`,
+   not the separate `_blog` folder.
 
-1. Open `_blog/templates/author-template.yml` in the Explorer and copy its contents.
-2. Right-click `_blog/authors`, select **New File**, and name it `your-name.yml`.
-   Replace `your-name` with your name in lowercase, with hyphens instead of spaces.
-3. Paste the template and fill in your full name and a short bio.
-4. In your article, set `authorId` to that filename without `.yml`. Set `author`
-   to the exact name in your profile.
+[![VS Code Explorer with the blog folder selected and New Folder in its context menu](assets/contribution/vscode-new-folder-menu.webp)](assets/contribution/vscode-new-folder-menu.webp)
 
-Do this for your first contribution only. For later articles, reuse your existing
-profile. See **Your author profile** below for an example.
+*Right-click blog, then choose New Folder.*
 
-### 6. Check your article
+3. Type `my-first-automation` and press **Enter**. Use your own article name
+   in lowercase, with hyphens instead of spaces.
 
-1. Save your files using **File > Save All**.
-2. Open your article's `index.md` file.
-3. Select the **Open Preview to the Side** icon at the top-right of the editor.
-   It opens a formatted preview beside your Markdown.
-4. Read through your article. Check the headings, links, spelling and images.
-5. Set `draft: false` in the metadata when your article is ready for review.
-   Keep `draft: true` if you are still working on it.
+[![New article folder name entered inside blog in VS Code](assets/contribution/vscode-folder-name.webp)](assets/contribution/vscode-folder-name.webp)
 
-This preview shows your Markdown formatting. The website adds its own design,
-the title, the byline and your author bio when the article is built.
+*Create one folder for your article inside blog.*
 
-### 7. Save your changes to GitHub
+4. Right-click your new article folder, select **New File**, type `index.md`
+   and press **Enter**.
 
-In the VS Code terminal, run each command below separately. Press **Enter** after
-each command and wait for it to finish. Replace the example article and author
-names with your own.
+[![index.md entered as a new filename inside the article folder](assets/contribution/vscode-new-article-file.webp)](assets/contribution/vscode-new-article-file.webp)
 
-First, select your article folder and its images:
+*The article file belongs inside your new folder: blog/my-first-automation/index.md.*
+
+5. In the Explorer, open **_blog > templates > post-template.md**. Click inside
+   its text, select all with **Ctrl+A** and copy with **Ctrl+C** (use **Cmd**
+   instead of Ctrl on macOS).
+
+[![The post-template.md file open in VS Code with article metadata and sample Markdown](assets/contribution/vscode-post-template.webp)](assets/contribution/vscode-post-template.webp)
+
+*Copy the template's contents. Leave the template file itself unchanged.*
+
+6. Open your new `index.md`, click inside the editor and paste the template.
+7. Fill in the fields between the two `---` lines. Set `slug` to your article
+   folder name, `author` to your full name and `authorId` to your author-profile
+   filename without `.yml`. For a new article, set `date` and `lastModified`
+   to the same date in `YYYY-MM-DD` format. Keep `draft: true` while writing.
+8. Below the **second `---` line**, replace the sample text with your own
+   article. Use `##` for section headings, then write your paragraphs beneath
+   them. Save with **Ctrl+S** (**Cmd+S** on macOS).
+
+[![Article metadata and the blog write-up in index.md inside the new article folder](assets/contribution/vscode-article-details.webp)](assets/contribution/vscode-article-details.webp)
+
+*The example folder and slug match. Write your own article beneath the metadata.*
+
+9. If you have images, right-click your article folder and select **New Folder**.
+   Name it `images` and press **Enter**. Skip this if you have no images.
+
+[![Creating an images folder inside the article folder in VS Code](assets/contribution/vscode-images-folder.webp)](assets/contribution/vscode-images-folder.webp)
+
+*Keep images inside your article folder, alongside index.md.*
+
+10. Drag your image files from File Explorer (Finder on macOS) into that
+    `images` folder in VS Code. Add each image to your article with its exact
+    filename, for example:
+
+```markdown
+![GitHub branch selector with an article branch name entered](./images/example-screenshot.webp)
+```
+
+See [Article metadata and images](#article-metadata-and-images) at the end of
+this guide for cover images and a reference for every field.
+
+### 4. Add your author profile
+
+Do this on your first contribution. For later articles, reuse your existing
+profile and `authorId`.
+
+1. Open **_blog > templates > author-template.yml**. Click inside the editor,
+   select all and copy the contents.
+2. In the Explorer, right-click **_blog > authors**, select **New File** and
+   enter `example-contributor.yml`. Replace `example-contributor` with your own
+   name in lowercase, with hyphens instead of spaces. Press **Enter**.
+
+[![Creating example-contributor.yml inside _blog/authors in VS Code](assets/contribution/vscode-new-author-file.webp)](assets/contribution/vscode-new-author-file.webp)
+
+*The filename must match the authorId in your article, followed by .yml.*
+
+3. Paste the author template into the new file. Set `name` to exactly the same
+   full name as your article's `author`. Write two or three sentences about
+   yourself in `bio`. Leave `image` and `website` empty if you do not need them.
+4. Save the file. Check that your article's `authorId` matches this filename
+   without `.yml`.
+
+[![Saved author profile showing name, bio and optional image and website fields](assets/contribution/vscode-author-profile.webp)](assets/contribution/vscode-author-profile.webp)
+
+*The example profile uses Example Contributor, matching the article's author field.*
+
+### 5. Check your article
+
+1. Select **File > Save All**.
+2. Open your article's `index.md`.
+3. Select **Open Preview to the Side** at the top-right of the editor. Depending
+   on your VS Code extensions, it may say **Show Markdown Preview to side**.
+   You can also press **Ctrl+K**, release the keys, then press **V** (use
+   **Cmd+K**, then **V** on macOS).
+
+[![VS Code with index.md on the left and the metadata table in its Markdown preview on the right](assets/contribution/vscode-preview-metadata.webp)](assets/contribution/vscode-preview-metadata.webp)
+
+*The preview may show metadata as a table first. This is not the final website layout.*
+
+4. Scroll down inside the preview to read the article below the metadata.
+   Check the headings, paragraphs, links, spelling and images. If an image is
+   missing, check its filename and the `./images/` path in your Markdown.
+
+[![Article preview showing a local image and the blog write-up beside the Markdown editor](assets/contribution/vscode-preview-body.webp)](assets/contribution/vscode-preview-body.webp)
+
+*Check the article body and images, not just the metadata at the top.*
+
+5. When your article is ready for publication, set `draft: false` and save.
+   Keep `draft: true` if you want feedback on an unfinished draft.
+
+The website adds its own design, title, byline and author bio when the article
+is built. You do not need to run the website locally to submit an article.
+
+### 6. Save your changes to GitHub
+
+1. Select **Source Control** in the left activity bar. Check that the changes
+   contain your article, its images and your author profile if you added one.
+   Open any file in the list to review it before committing.
+
+[![Source Control listing the example article, image and author profile as three changed files](assets/contribution/vscode-review-changes.webp)](assets/contribution/vscode-review-changes.webp)
+
+*For this example, there are three files: the article, one image and the author profile.*
+
+2. Select **Terminal > New Terminal**. Run each command below separately,
+   pressing **Enter** after each and waiting for it to finish. Use your own
+   article folder and author-profile filename.
+
+Select your article folder, including its images:
 
 ```shell
 git add blog/my-first-automation/
 ```
 
-Select your author profile too, if you created or changed it:
+Select your author profile if you created or changed it:
 
 ```shell
-git add _blog/authors/your-name.yml
+git add _blog/authors/example-contributor.yml
 ```
 
-Save these changes with a short message:
+Save the selected files in a commit:
 
 ```shell
 git commit -m "Blog: add my first automation article"
 ```
 
-Upload your branch to your fork on GitHub:
+[![VS Code Source Control after the local commit, with no pending file changes and Publish Branch available](assets/contribution/vscode-local-commit.webp)](assets/contribution/vscode-local-commit.webp)
+
+*After committing, the files are saved locally. Publish Branch indicates that the branch still needs uploading.*
+
+Upload your branch to your fork:
 
 ```shell
 git push -u origin blog/my-first-automation
 ```
 
-Sign in to GitHub if asked. Wait for the upload to finish, then open your fork
-in your browser. Your article branch and files should now be there.
+Sign in to GitHub if asked. Wait until the upload finishes and the terminal
+prompt returns. Open **your fork** in your browser and select your article
+branch from the branch dropdown. Check that your article, images and author
+profile are there. Uploading to your fork does not publish to the website.
 
-If Git asks for your name and email before it can commit, run these commands with
-your own details, then retry the `git commit` command:
+If Git asks for your name and email before it can commit, run these commands
+with your own details, then retry the commit:
 
 ```shell
 git config user.name "Your Name"
@@ -178,60 +312,194 @@ git config user.email "your-github-email@example.com"
 Use an email connected to your GitHub account, or the no-reply email shown in
 your GitHub email settings. These details are attached to your commits.
 
-### 8. Create your pull request
+### 7. Create your pull request
 
-Follow **Open a pull request** below. Pushing to your fork alone does not submit
-the article to Platform Explorers.
+In your fork, select **Contribute > Open pull request**. Follow the screenshots
+under [Open a pull request](#open-a-pull-request-vs-code-and-github) below to
+check the destination, add your title and description, and submit it for review.
 
-## Option B: contribute directly on GitHub
+Use the same article branch for any requested changes. Save, commit and push
+your edits to update the existing pull request.
 
-### 1. Fork and create a branch
+## Option C: contribute directly on GitHub
 
-1. Sign in and [fork the repository](https://github.com/PlatformExplorers/platformexplorerswebsite/fork).
-   If you already have a fork, sync its `main` branch first.
-2. In **your fork**, open the branch dropdown that currently says `main`.
-3. Enter `blog/my-first-automation`, then choose the option to create that branch
-   from `main`. Use your own article name.
-4. Check that this branch is selected before adding files. Stay on it throughout
-   your contribution.
+Use this option to write and save your article in your browser. Start in **your
+fork**, after completing the shared GitHub setup above.
 
-### 2. Create the article folder and Markdown file
+The screenshots use the article folder `my-first-automation` and the author
+`Example Contributor`. Replace these with your own article name and author
+details, and use them consistently throughout.
 
-1. Open [`_blog/templates/post-template.md`](_blog/templates/post-template.md)
-   in another tab and copy its contents.
-2. Return to the root of **your fork**, on your new branch.
-3. Select **Add file → Create new file**.
-4. In the filename field, enter `blog/my-first-automation/index.md`.
-   GitHub creates the folders when you type the `/` characters.
-5. Paste the template, replace the metadata and write your article.
-6. Use **Preview** to check the Markdown formatting.
-7. Select **Commit changes**, enter a clear message and commit to your article
-   branch. Do not create a different branch for each file.
+### 1. Create your article branch
 
-### 3. Upload your images
+Open the dropdown that says **main**. Enter a branch name such as
+`blog/my-first-automation`, then select **Create branch ... from main**.
+Stay on this branch while adding your article, images and author profile.
 
-Skip this step if your article has no images.
+[![Branch selector with blog/my-first-automation entered and the Create branch action](assets/contribution/create-branch.webp)](assets/contribution/create-branch.webp)
 
-1. Open your new `blog/my-first-automation/` folder in your fork.
-2. To create its images folder, use **Add file → Create new file**, enter
-   `images/.gitkeep` and commit this empty placeholder to the same branch.
-3. Open `images/`, select **Add file → Upload files**, then drag in your images.
-4. Commit the upload to the same branch. You can leave `.gitkeep` in the folder;
-   it does not appear in your article.
-5. Back in `index.md`, use `./images/filename.webp` for both the cover and inline
-   images. See the examples below.
+*The example branch is blog/my-first-automation, created from main.*
 
-### 4. Add your author profile (first contribution only)
+### 2. Open a new file
 
-1. Copy [`_blog/templates/author-template.yml`](_blog/templates/author-template.yml).
-2. At your fork's root, use **Add file → Create new file** and enter
-   `_blog/authors/your-name.yml`.
-3. Paste the template, fill in your name and bio, and commit to the same article branch.
-4. Check `author` in `index.md` matches your profile's `name`, and `authorId`
-   matches the profile filename without `.yml`.
+In your fork's file list, check that the branch dropdown shows your article
+branch, such as `blog/my-first-automation`. Select **Add file**, then
+**Create new file**.
 
-You can edit any file again using its pencil/edit button, then commit the changes
-to this same branch. No terminal, local clone or Python installation is needed.
+[![Add file menu on the article branch with Create new file selected](assets/contribution/add-file-menu.webp)](assets/contribution/add-file-menu.webp)
+
+*Choose Create new file to open the article editor.*
+
+### 3. Add the filename and article details
+
+In **Name your file**, create the article folder and file like this:
+
+1. Type `blog/` to put the file inside the website's blog folder.
+2. Type your article folder name followed by `/`, for example
+   `my-first-automation/`. When you type the slash, GitHub moves the folder name
+   into the path above the editor.
+3. Type `index.md` as the filename.
+
+The complete path should be `blog/my-first-automation/index.md`. Use your own
+article folder name, with lowercase words separated by hyphens. GitHub saves the
+new folder and file together when you select **Commit changes** in step 6.
+
+Open the [post template](_blog/templates/post-template.md) in a new browser tab.
+On its GitHub page, select **Raw** to show the plain text. Select all that text
+and copy it, then return to your new file and paste it into the editor.
+Do not copy the formatted Preview view.
+
+Fill in the article details between the two `---` lines. For a new article, set
+`date` and `lastModified` to the same date in `YYYY-MM-DD` format.
+The screenshot uses `slug: "my-first-automation"`, `author: "Example Contributor"`
+and `authorId: "example-contributor"`.
+
+Use your own values. The `slug` must match your article folder, and `authorId`
+must match the author-profile filename you will add in step 9. Keep `draft: true`
+while you are writing; change it to `false` when the article is ready for publication.
+
+[![Article editor showing index.md inside blog/my-first-automation and the article metadata](assets/contribution/article-editor.webp)](assets/contribution/article-editor.webp)
+
+*The path, slug and author details in the screenshot belong to the same example article.*
+
+### 4. Write the blog below the metadata
+
+After the **second `---` line**, replace the template's sample text with your
+article. Use `##` for section headings, then write your paragraphs underneath.
+You can also add lists, links and examples.
+
+The screenshot below shows the article text being written after the metadata.
+Replace the tutorial write-up with your own article, blog or project story.
+
+[![Markdown editor showing the article write-up after the closing metadata line](assets/contribution/blog-writeup.webp)](assets/contribution/blog-writeup.webp)
+
+*Write your article below the closing --- line, as shown here.*
+
+### 5. Preview the article
+
+Select **Preview** beside **Edit**. GitHub displays the metadata as a table first.
+This is expected; it is not the article's final website layout.
+
+[![GitHub Preview tab displaying the metadata as a table](assets/contribution/article-preview.webp)](assets/contribution/article-preview.webp)
+
+*The first part of the preview shows your metadata.*
+
+Scroll **inside the preview** past that table to read the article text. Check
+your headings, paragraphs, spelling and links. Return to **Edit** to make changes.
+
+[![Preview of the sample blog write-up below the metadata table](assets/contribution/blog-writeup-preview.webp)](assets/contribution/blog-writeup-preview.webp)
+
+*Below the table, the preview shows the actual blog text and headings.*
+
+### 6. Save the article to your branch
+
+Select **Commit changes** at the top of the editor. Enter a short message, such
+as `Add my first automation article`. Keep **Commit directly to the
+blog/my-first-automation branch** selected, using your own branch name.
+Select **Commit changes** in the dialog to save.
+
+[![Commit dialog with a message and Commit directly to the article branch selected](assets/contribution/commit-dialog.webp)](assets/contribution/commit-dialog.webp)
+
+*Save to the branch you created in step 1. Do not create another branch for each file.*
+
+### 7. Create an images folder, if needed
+
+Skip steps 7 and 8 if your article has no images.
+
+On your article branch, open `blog/`, then your article folder (the example is
+`my-first-automation`). Select **Add file**, then
+**Create new file**. Enter `images/.gitkeep` as the filename and leave the content
+empty. GitHub moves `images` into the breadcrumb and leaves `.gitkeep` in the
+filename field, as shown below.
+
+Select **Commit changes** and save to the same article branch. This creates the
+`images/` folder; `.gitkeep` is only an empty placeholder.
+
+[![New file editor with images in the breadcrumb and .gitkeep as the filename](assets/contribution/create-images-folder.webp)](assets/contribution/create-images-folder.webp)
+
+*Typing images/.gitkeep creates the images folder inside your article folder.*
+
+### 8. Upload and reference your images
+
+Open the new `images/` folder. Select **Add file**, then **Upload files**.
+On the screen below, select **choose your files** or drag your images into the
+upload area. Once the files appear in the upload list, enter a short commit message, keep
+your article branch selected and select **Commit changes**. You can leave `.gitkeep` in the folder.
+
+[![Upload screen inside blog/my-first-automation/images with a file selection area and commit button](assets/contribution/upload-images.webp)](assets/contribution/upload-images.webp)
+
+*The screenshot shows where to choose your image files before saving the upload.*
+
+Return to your article's `index.md` on the same branch and select its pencil/edit
+button. Image paths must match the uploaded filenames exactly, including the
+file extension and capital letters. To place an image within your article, use
+this example with your own filename and description:
+
+```markdown
+![Describe what the image shows](./images/cover.webp)
+```
+
+To show an image as the article's cover, fill in these two metadata fields
+with your own filename and description:
+
+```yaml
+image: "./images/cover.webp"
+imageAlt: "Describe what your cover image shows"
+```
+
+If you do not want a cover, leave `image: ""` and `imageAlt: ""`. Select
+**Commit changes** to save your edits to the same article branch.
+
+### 9. Add your author profile
+
+For your first contribution, return to your fork's file list. Check that your
+article branch is selected, then select **Add file**, followed by **Create new file**.
+
+In **Name your file**, enter `_blog/authors/example-contributor.yml`, replacing
+`example-contributor` with the `authorId` you used in your article.
+
+Open the [author template](_blog/templates/author-template.yml) in another tab.
+Select **Raw**, copy the plain text and paste it into your new profile file.
+Set `name` to exactly the same name as the article's `author` field. Write two
+or three sentences about yourself in `bio`. Leave `image` and `website` empty
+if you do not want to add them.
+
+[![Author profile editor showing _blog/authors/example-contributor.yml with the name and bio fields](assets/contribution/author-profile.webp)](assets/contribution/author-profile.webp)
+
+*The example profile filename matches authorId: example-contributor, and its name matches author: Example Contributor.*
+
+Select **Commit changes** and save the profile to your article branch. On later
+contributions, reuse your existing profile and `authorId`.
+
+### 10. Open your pull request
+
+Check that your article, any images and your author profile are saved on the
+same branch. If the article is ready for publication, edit `index.md`, set
+`draft: false` and commit that change. Keep `draft: true` if you are submitting
+a draft for feedback.
+
+Continue to [Open a pull request](#open-a-pull-request-vs-code-and-github) below
+to send them to Platform Explorers for review.
 
 ## Your author profile
 
@@ -258,7 +526,79 @@ For a reusable portrait, upload it to `assets/blog/` and use, for example,
 `image: "/assets/blog/your-name.webp"`. Leave optional fields empty to omit them.
 Only include information you want to appear publicly.
 
+## Open a pull request (VS Code and GitHub)
+
+### 1. Start the pull request from your fork
+
+Open your fork on GitHub and select your article branch. Select **Contribute**,
+then **Open pull request**, as shown below. You may also see a **Compare & pull
+request** button above the files.
+
+[![Contribute menu on the article branch with the Open pull request button](assets/contribution/open-pull-request.webp)](assets/contribution/open-pull-request.webp)
+
+*Open the pull request from the branch containing your saved article files.*
+
+### 2. Check where your changes will go
+
+At the top of the comparison page, check these settings before continuing:
+
+| Setting | Value |
+| --- | --- |
+| Base repository | `PlatformExplorers/platformexplorerswebsite` |
+| Base branch | `main` |
+| Head repository | Your fork |
+| Compare branch | Your article branch, such as `blog/my-first-automation` |
+
+[![Comparison page with PlatformExplorers main as the destination and the personal article branch as the source](assets/contribution/pull-request-comparison.webp)](assets/contribution/pull-request-comparison.webp)
+
+*The left side is the Platform Explorers destination. The right side is your fork and article branch.*
+
+### 3. Fill in the form and submit
+
+Add a title, such as `Blog: My first automation`, and a short description of your
+article. Complete the checklist in the description. Review the changed files
+shown below the form: include your article, its images and your new or updated
+author profile.
+
+When your article is ready, check that its metadata has `draft: false`, then
+select **Create pull request**. If you are still working on it, keep `draft: true`
+and choose **Create draft pull request** from the dropdown beside that button.
+
+[![Pull request form with the title, description, checklist and Create pull request button](assets/contribution/pull-request-form.webp)](assets/contribution/pull-request-form.webp)
+
+*Fill in your own article details. This screenshot is a tutorial example; its form was not submitted.*
+
+Watch the PR's checks and comments. If a check fails, open its build log and find
+the filename and error. Fix the file on **the same branch** in VS Code or GitHub,
+commit and push/save. The existing PR updates automatically; do not open another.
+If this is your first contribution, a maintainer may need to approve the automated
+checks before they run.
+
+Opening a PR does not publish your article. After a maintainer approves and merges
+a ready post, the build creates its HTML page, updates `blog.html` and the sitemap,
+and deploys the website. A draft remains hidden. Keep an existing post's slug
+unchanged so its published links continue working.
+
+## Before you submit through GitHub
+
+- [ ] My article is `blog/my-article/index.md` and the folder matches its `slug`.
+- [ ] I used the post template and filled in every required metadata field.
+- [ ] I added or reused an author profile with a publication-ready bio.
+- [ ] My images are in my article's `images/` folder, with working paths and alt text.
+- [ ] I have permission to publish the content and images, and credited sources.
+- [ ] I checked formatting, links and private information.
+- [ ] I set `draft` correctly and included only the intended files in my PR.
+
+## Further help
+
+- [VS Code: cloning repositories](https://code.visualstudio.com/docs/sourcecontrol/repos-remotes)
+- [VS Code: branches and publishing a branch](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees)
+- [GitHub: opening a pull request from a fork](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork)
+
 ## Article metadata and images
+
+These fields are for the VS Code and GitHub options. They are not required for
+a Word document sent by email.
 
 Keep the metadata between the two `---` lines at the start of `index.md`.
 Set `slug` to the article folder name. These must match. For a local image:
@@ -307,54 +647,6 @@ links are removed during the build.
 
 Credit sources and any images that require attribution. Check facts and links,
 and remove credentials or private information from examples and screenshots.
-
-## Open a pull request (both methods)
-
-1. Open **your fork** on GitHub and choose your article branch.
-2. Select **Contribute → Open pull request** or **Compare & pull request**.
-   If neither appears, use **Pull requests → New pull request → compare across forks**.
-3. Confirm these settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Base repository | `PlatformExplorers/platformexplorerswebsite` |
-    | Base branch | `main` |
-    | Head repository | Your fork |
-    | Compare branch | `blog/my-first-automation` (your article branch) |
-
-4. Review the files shown in the comparison. Include your article, its images
-   and your author profile if new or changed. Do not include unrelated changes.
-5. Add a title such as `Blog: My first automation` and a short description.
-6. Complete the PR checklist. Confirm `draft: false` for a ready article, or keep
-   `draft: true` and create a draft PR if you still want feedback.
-7. Select **Create pull request**. A Platform Explorers maintainer will review it.
-
-Watch the PR's checks and comments. If a check fails, open its build log and find
-the filename and error. Fix the file on **the same branch** in VS Code or GitHub,
-commit and push/save. The existing PR updates automatically; do not open another.
-If this is your first contribution, a maintainer may need to approve the automated
-checks before they run.
-
-Opening a PR does not publish your article. After a maintainer approves and merges
-a ready post, the build creates its HTML page, updates `blog.html` and the sitemap,
-and deploys the website. A draft remains hidden. Keep an existing post's slug
-unchanged so its published links continue working.
-
-## Before you submit
-
-- [ ] My article is `blog/my-article/index.md` and the folder matches its `slug`.
-- [ ] I used the post template and filled in every required metadata field.
-- [ ] I added or reused an author profile with a publication-ready bio.
-- [ ] My images are in my article's `images/` folder, with working paths and alt text.
-- [ ] I have permission to publish the content and images, and credited sources.
-- [ ] I checked formatting, links and private information.
-- [ ] I set `draft` correctly and included only the intended files in my PR.
-
-## Further help
-
-- [VS Code: cloning repositories](https://code.visualstudio.com/docs/sourcecontrol/repos-remotes)
-- [VS Code: branches and publishing a branch](https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees)
-- [GitHub: opening a pull request from a fork](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork)
 
 ## Maintainer notes
 

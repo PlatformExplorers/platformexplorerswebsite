@@ -1,0 +1,126 @@
+{
+  "assets/contribution/repository.webp": {
+    "width": 1230,
+    "height": 620
+  },
+  "assets/contribution/fork-setup.webp": {
+    "width": 740,
+    "height": 580
+  },
+  "assets/contribution/fork-created.webp": {
+    "width": 1220,
+    "height": 650
+  },
+  "assets/contribution/copy-clone-url.webp": {
+    "width": 920,
+    "height": 500
+  },
+  "assets/contribution/create-branch.webp": {
+    "width": 920,
+    "height": 460
+  },
+  "assets/contribution/add-file-menu.webp": {
+    "width": 930,
+    "height": 460
+  },
+  "assets/contribution/article-editor.webp": {
+    "width": 1230,
+    "height": 620
+  },
+  "assets/contribution/article-preview.webp": {
+    "width": 1230,
+    "height": 790
+  },
+  "assets/contribution/blog-writeup.webp": {
+    "width": 1230,
+    "height": 770
+  },
+  "assets/contribution/blog-writeup-preview.webp": {
+    "width": 1230,
+    "height": 890
+  },
+  "assets/contribution/commit-dialog.webp": {
+    "width": 520,
+    "height": 555
+  },
+  "assets/contribution/create-images-folder.webp": {
+    "width": 1230,
+    "height": 250
+  },
+  "assets/contribution/upload-images.webp": {
+    "width": 1230,
+    "height": 685
+  },
+  "assets/contribution/author-profile.webp": {
+    "width": 1230,
+    "height": 250
+  },
+  "assets/contribution/open-pull-request.webp": {
+    "width": 920,
+    "height": 460
+  },
+  "assets/contribution/pull-request-comparison.webp": {
+    "width": 1220,
+    "height": 350
+  },
+  "assets/contribution/pull-request-form.webp": {
+    "width": 850,
+    "height": 665
+  },
+  "assets/contribution/vscode-terminal-menu.webp": {
+    "width": 680,
+    "height": 370
+  },
+  "assets/contribution/vscode-open-project.webp": {
+    "width": 875,
+    "height": 530
+  },
+  "assets/contribution/vscode-new-folder-menu.webp": {
+    "width": 650,
+    "height": 425
+  },
+  "assets/contribution/vscode-folder-name.webp": {
+    "width": 650,
+    "height": 345
+  },
+  "assets/contribution/vscode-new-article-file.webp": {
+    "width": 650,
+    "height": 345
+  },
+  "assets/contribution/vscode-post-template.webp": {
+    "width": 1500,
+    "height": 920
+  },
+  "assets/contribution/vscode-article-details.webp": {
+    "width": 1500,
+    "height": 970
+  },
+  "assets/contribution/vscode-images-folder.webp": {
+    "width": 1500,
+    "height": 610
+  },
+  "assets/contribution/vscode-new-author-file.webp": {
+    "width": 1200,
+    "height": 515
+  },
+  "assets/contribution/vscode-author-profile.webp": {
+    "width": 1500,
+    "height": 520
+  },
+  "assets/contribution/vscode-preview-metadata.webp": {
+    "width": 1600,
+    "height": 1019
+  },
+  "assets/contribution/vscode-preview-body.webp": {
+    "width": 1600,
+    "height": 1019
+  },
+  "assets/contribution/vscode-review-changes.webp": {
+    "width": 970,
+    "height": 620
+  },
+  "assets/contribution/vscode-local-commit.webp": {
+    "width": 970,
+    "height": 620
+  }
+}

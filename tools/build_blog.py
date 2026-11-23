@@ -197,16 +197,32 @@ def build(site=SITE):
     import textwrap
     guide_source = re.sub(r'(?ms)^ {3}```[^\n]*\n.*?^ {3}```[ \t]*$', lambda match: textwrap.dedent(match[0]), guide_source)
     guide_html = markdown.markdown(guide_source, extensions=['fenced_code', 'tables', 'sane_lists', 'toc'])
-    guide_html = bleach.clean(guide_html, tags=TAGS, attributes={'a':['href','title'], 'h2':['id'], 'h3':['id'], 'ol':['start'], 'code':['class']}, protocols=['https','http','mailto'], strip=True)
+    guide_html = bleach.clean(guide_html, tags=TAGS, attributes={'a':['href','title'], 'h2':['id'], 'h3':['id'], 'ol':['start'], 'img':['src','alt'], 'code':['class']}, protocols=['https','http','mailto'], strip=True)
     def guide_link(match):
         href = html.unescape(match[1])
+        if href.startswith('assets/contribution/'):
+            href = '/' + href
         if not href.startswith(('https://','http://','mailto:','#','/')):
             href = 'https://github.com/PlatformExplorers/platformexplorerswebsite/blob/main/' + href
         return 'href="' + esc(href) + '"'
     guide_html = re.sub(r'href="([^"]+)"', guide_link, guide_html)
-    jumps = '<nav class="guide-jumps" aria-label="Contribution guide sections"><a href="#what-you-need">What you need</a><a href="#option-a-contribute-using-vs-code">Using VS Code</a><a href="#option-b-contribute-directly-on-github">Using GitHub</a><a href="#open-a-pull-request-both-methods">Open a pull request</a></nav>'
+    image_manifest = site / '_blog/guide-images.json'
+    image_sizes = json.loads(image_manifest.read_text(encoding='utf-8')) if image_manifest.exists() else {}
+    def guide_image(match):
+        src = html.unescape(match[1])
+        if not src.startswith('assets/contribution/'):
+            raise ValueError(f'Guide screenshot must use assets/contribution/: {src}')
+        target = (site / src).resolve()
+        if not target.is_relative_to((site / 'assets/contribution').resolve()) or not target.is_file():
+            raise ValueError(f'Guide screenshot not found: {src}')
+        size = image_sizes.get(src, {})
+        dimensions = f' width="{int(size["width"])}" height="{int(size["height"])}"' if size else ''
+        return 'src="/' + esc(src) + '" loading="lazy"' + dimensions
+    guide_html = re.sub(r'src="([^"]+)"', guide_image, guide_html)
+
+    jumps = '<nav class="guide-jumps" aria-label="Contribution guide sections"><a href="#what-you-need">What you need</a><a href="#option-a-contribute-by-email">By email</a><a href="#for-vs-code-and-github-fork-the-repository">GitHub setup</a><a href="#option-b-contribute-using-vs-code">Using VS Code</a><a href="#option-c-contribute-directly-on-github">Using GitHub</a><a href="#open-a-pull-request-vs-code-and-github">Open a pull request</a></nav>'
     guide_main = '<article class="contribution-guide wrap"><a class="blog-back" href="/blog.html">All articles</a><header class="article-heading"><h1>Contribute a blog</h1></header>' + jumps + '<div class="article-body">' + guide_html + '</div></article>'
-    write_changed(site / 'contribute.html', page('Contribute a blog | Platform Explorers', 'How to contribute a blog using VS Code or GitHub: fork the repository, add your article and author profile, and open a pull request.', '/contribute.html', guide_main))
+    write_changed(site / 'contribute.html', page('Contribute a blog | Platform Explorers', 'Contribute an article, blog or project write-up using VS Code, GitHub or a Word document sent by email to Platform Explorers.', '/contribute.html', guide_main))
 
     listing = ''.join(cards)
     main = '<section class="blog-heading wrap"><p class="blog-kicker">THE COMMUNITY BLOG</p><h1>Learning, shared.</h1><p>Ideas, practical guides and experiences from the Platform Explorers community.</p><a class="blog-contribute" href="/contribute.html">Contribute a blog</a></section><section class="blog-list wrap" aria-label="Community articles">'+listing+'</section>'

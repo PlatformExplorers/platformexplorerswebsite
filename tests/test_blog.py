@@ -16,6 +16,7 @@ class BlogBuildTest(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.site = Path(self.temp.name)
         shutil.copy2(ROOT / 'contribution.md', self.site / 'contribution.md')
+        shutil.copytree(ROOT / 'assets/contribution', self.site / 'assets/contribution')
         shutil.copytree(ROOT / '_blog/templates', self.site / '_blog/templates')
         (self.site / '_blog/posts').mkdir()
         (self.site / '_blog/authors').mkdir()
@@ -132,10 +133,34 @@ class BlogBuildTest(unittest.TestCase):
     def test_contribution_page_and_blog_links(self):
         blog.build(self.site)
         guide = (self.site / 'contribute.html').read_text(encoding='utf-8')
-        self.assertIn('id="option-a-contribute-using-vs-code"', guide)
-        self.assertIn('id="option-b-contribute-directly-on-github"', guide)
+        self.assertIn('id="option-b-contribute-using-vs-code"', guide)
+        self.assertLess(guide.index('id="for-vs-code-and-github-fork-the-repository"'), guide.index('id="option-b-contribute-using-vs-code"'))
+        self.assertNotIn('Fork and create a branch', guide)
+        self.assertIn('id="option-c-contribute-directly-on-github"', guide)
+        self.assertIn('id="option-a-contribute-by-email"', guide)
+        self.assertLess(guide.index('id="option-a-contribute-by-email"'), guide.index('id="for-vs-code-and-github-fork-the-repository"'))
+        self.assertIn('mailto:info@platformexplorers.com?subject=Blog%20Contribution', guide)
+        self.assertIn('all images used in the write-up inside the document', guide)
+        self.assertIn('your name and a short author bio', guide)
+        self.assertIn('id="open-a-pull-request-vs-code-and-github"', guide)
         self.assertIn('/blob/main/_blog/templates/post-template.md', guide)
         self.assertNotIn('Maintainer notes', guide)
+        self.assertIn('src="/assets/contribution/author-profile.webp"', guide)
+        self.assertIn('src="/assets/contribution/pull-request-form.webp"', guide)
+        self.assertIn('src="/assets/contribution/blog-writeup.webp"', guide)
+        # Each key screenshot stays under the instruction it illustrates.
+        for heading, screenshot in [
+            ('2-open-a-new-file', 'add-file-menu'),
+            ('3-add-the-filename-and-article-details', 'article-editor'),
+            ('4-write-the-blog-below-the-metadata', 'blog-writeup'),
+            ('6-save-the-article-to-your-branch', 'commit-dialog'),
+            ('7-create-an-images-folder-if-needed', 'create-images-folder'),
+            ('8-upload-and-reference-your-images', 'upload-images'),
+            ('9-add-your-author-profile', 'author-profile'),
+        ]:
+            section = guide.split(f'<h3 id="{heading}">', 1)[1].split('<h3 ', 1)[0]
+            self.assertIn(f'/assets/contribution/{screenshot}.webp', section)
+
         self.assertIn('<pre><code class="language-shell">git clone ', guide)
         self.assertIn('<pre><code class="language-shell">git switch -c ', guide)
         self.assertIn('<ol start="5">', guide)
