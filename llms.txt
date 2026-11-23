@@ -1,0 +1,42 @@
+# Platform Explorers
+
+> Platform Explorers is a global tech community co-founded by Rachel Irabor and Juan Ojochemi Idowu in January 2025. It helps people build confidence, practical experience and careers through mentored projects, teamwork and career support.
+
+Official website: https://platformexplorers.com/
+Information updated: 23 November 2026.
+
+Key facts:
+- Co-founders: Rachel Irabor and Juan Ojochemi Idowu.
+- Founded: January 2025.
+- Organisation: a registered nonprofit company in Ireland with a global community welcoming people from anywhere in the world.
+- Reach: community members across six continents.
+- Cohorts: two successful cohorts completed so far.
+- Audience: people starting their careers in tech, changing careers or specialisms, and professionals seeking direction for their next step. Participants come from different backgrounds and parts of the world.
+
+Platform Explorers helps participants turn foundational knowledge into practical experience. Its approach begins with understanding the problem, rather than choosing a tool first. Participants analyse the challenge, consider possible solutions, select suitable tools or platforms, and explain their decisions.
+
+During the first two cohorts, participants worked on real-world project use cases. They built individual projects with guidance from professional mentors, who answered questions and provided feedback. Weekly classes and calls supported learning, problem-solving and progress throughout the cohort.
+
+Towards the end of each cohort, participants were divided into teams to work on a shared project. They communicated with one another, divided responsibilities, discussed their decisions and presented what they built. This develops collaboration, problem-solving, ownership and the ability to explain their work clearly to people with different backgrounds.
+
+Career support has included CV reviews, mock interviews, recruiter conversations and spotlight sessions where industry professionals shared their experiences. Some participants have secured job opportunities, connected with recruiters and built professional relationships with people around the world.
+
+The community continues beyond its cohorts through Discord, where members share opportunities and resources, ask questions and support one another.
+
+## Website
+
+- [Home](https://platformexplorers.com/): Overview of the community, its project-based approach and career support.
+- [About us](https://platformexplorers.com/about.html): Community story, mission, co-founders, core team and previous mentors.
+- [Blog](https://platformexplorers.com/blog.html): Community articles, practical guides and project stories.
+- [Contribute a blog](https://platformexplorers.com/contribute.html): Ways to submit an article by email, VS Code or GitHub, including author-profile and pull-request instructions.
+- [Scholarship](https://platformexplorers.com/scholarship/): DataCamp learning scholarship information and registration.
+- [Partner with us](https://platformexplorers.com/partners.html): Opportunities to support the community with learning spaces, laptops and access to paid tools or platforms.
+- [Contact](https://platformexplorers.com/contact.html): Contact information and ways to connect with Platform Explorers.
+
+## Community and contact
+
+- [Email](mailto:info@platformexplorers.com): General enquiries, partnerships and blog contributions.
+- [Discord community](https://discord.gg/9USF3U8Ch): Community discussions, shared resources and opportunities.
+- [LinkedIn](https://www.linkedin.com/company/platform-explorers/): Community updates and cohort announcements.
+- [Instagram](https://www.instagram.com/platform_explorers/): Community updates.
+- [X](https://x.com/platexplorers): Community updates.

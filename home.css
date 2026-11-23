@@ -115,3 +115,10 @@
 .home-partner img{display:block;width:100%;height:auto}
 .home-partner>a:hover{opacity:.8}
 @media(max-width:760px){.home-partner{align-items:flex-start;flex-direction:column;gap:23px;padding-top:0;padding-bottom:42px}.home-partner h2{font-size:22px}.home-partner>a{width:210px}}
+
+/* Community milestones stay within the opening introduction. */
+.hero-milestones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:32px 0 0;max-width:490px;padding:22px;background:var(--green);border:1px solid #d8ddcf;border-radius:8px}
+.hero-milestones>div{display:flex;flex-direction:column;gap:6px}
+.hero-milestones dt{font-size:12px;line-height:1.5;color:var(--muted)}
+.hero-milestones dd{order:-1;margin:0;font-family:Manrope,Arial,sans-serif;font-size:29px;font-weight:500;line-height:1.2;letter-spacing:-1px;color:var(--ink)}
+@media(max-width:760px){.hero-milestones{gap:14px;margin-top:28px;padding:20px 16px}.hero-milestones dd{font-size:26px}.hero-milestones dt{font-size:12px}}
