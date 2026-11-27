@@ -1,0 +1,33 @@
+/* Newsletter signup uses the site's typography and a single, quiet form panel. */
+.newsletter-page{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:76px;padding-bottom:88px;min-height:65vh}
+.newsletter-kicker{font-size:20px;font-weight:600;color:var(--blue);line-height:1.6;margin-bottom:24px}
+.newsletter-copy h1{font-size:clamp(36px,3.8vw,54px);font-weight:500;letter-spacing:-2px;line-height:1.15;margin:0 0 24px;max-width:540px}
+.newsletter-description{font-size:17px;line-height:1.85;color:var(--muted);max-width:490px;margin:0}
+.newsletter-card{padding:38px;background:transparent;border:0;border-radius:0;min-width:0}
+.newsletter-signup{min-width:0;width:100%}
+.newsletter-status,.newsletter-help{font-size:16px;line-height:1.7;color:var(--muted)}
+.newsletter-status[hidden]{display:none}
+.newsletter-note{font-size:14px;line-height:1.7;color:var(--muted);margin:20px 0 0;text-align:center}
+.newsletter-document>.formkit-overlay{display:none!important}
+.newsletter-signup form[data-uid="dbb0c59509"]{display:block!important;position:static!important;width:100%!important;min-width:0!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-family:inherit!important}
+.newsletter-signup [data-style="clean"]{padding:0!important}
+.newsletter-signup .formkit-fields{display:flex!important;flex-direction:column!important;gap:16px!important;margin:0!important;align-items:stretch!important}
+.newsletter-signup .formkit-field{width:100%!important;flex:auto!important;margin:0!important;padding:0!important;order:1}
+.newsletter-signup .formkit-field:has(input[name="fields[first_name]"]){order:0}
+.newsletter-signup .formkit-input{display:block!important;width:100%!important;min-height:56px!important;padding:15px 16px!important;border:1px solid #c7d2e0!important;border-radius:4px!important;background:#fff!important;color:var(--ink)!important;font-family:inherit!important;font-size:16px!important;line-height:1.5!important;box-shadow:none!important}
+.newsletter-signup .formkit-input:focus{outline:2px solid var(--blue)!important;outline-offset:2px!important}
+.newsletter-signup .formkit-submit{order:2;display:block!important;width:100%!important;min-height:54px!important;margin:2px 0 0!important;padding:15px 20px!important;border:0!important;border-radius:4px!important;background:var(--blue)!important;color:#fff!important;font-family:inherit!important;font-size:16px!important;font-weight:600!important;line-height:1.5!important;cursor:pointer}
+.newsletter-signup .formkit-submit:hover{filter:brightness(.94)}
+.newsletter-signup .formkit-submit:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.newsletter-signup .formkit-alert{font-family:inherit!important;font-size:15px!important;line-height:1.6!important}
+.newsletter-signup .formkit-powered-by-convertkit-container{display:none!important}
+@media(max-width:1000px){.newsletter-page{gap:36px}.newsletter-card{padding:28px}.newsletter-copy h1{font-size:40px}}
+@media(max-width:760px){.newsletter-page{grid-template-columns:1fr;gap:30px;padding-top:38px;padding-bottom:48px;min-height:0}.newsletter-kicker{margin-bottom:18px}.newsletter-copy h1{font-size:36px;letter-spacing:-1.3px;max-width:480px;margin-bottom:20px}.newsletter-description{font-size:16px}.newsletter-card{padding:26px 22px}.newsletter-note{font-size:14px}}
+
+.newsletter-signup .newsletter-field-label{display:block;font-family:inherit;font-size:17px;line-height:1.5;font-weight:600;color:var(--ink);margin:0 0 10px}
+.newsletter-signup .formkit-fields{gap:24px!important}
+.newsletter-signup .formkit-input{min-height:62px!important;padding:17px 18px!important;border-color:#deded8!important;font-size:17px!important}
+.newsletter-signup .formkit-alert-success{background:var(--green)!important;border:1px solid #d8ddcf!important;border-radius:6px!important;color:var(--ink)!important;padding:26px!important;text-align:left!important;margin:0!important}
+.newsletter-signup .formkit-alert-success strong{display:block;font-family:Manrope,Arial,sans-serif;font-size:23px;line-height:1.35;margin-bottom:12px}
+.newsletter-signup .formkit-alert-success p{font-size:16px;line-height:1.7;margin:0 0 10px}
+.newsletter-signup .formkit-alert-success p:last-child{margin-bottom:0;color:var(--muted);font-size:14px}
