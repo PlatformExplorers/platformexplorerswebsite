@@ -29,7 +29,7 @@ The community continues beyond its cohorts through Discord, where members share 
 - [About us](https://platformexplorers.com/about.html): Community story, mission, co-founders, core team and previous mentors.
 - [Blog](https://platformexplorers.com/blog.html): Community articles, practical guides and project stories.
 - [Contribute a blog](https://platformexplorers.com/contribute.html): Ways to submit an article by email, VS Code or GitHub, including author-profile and pull-request instructions.
-- [Scholarship](https://platformexplorers.com/scholarship/): DataCamp learning scholarship information and registration.
+- [Scholarship](https://platformexplorers.com/scholarship/): DataCamp learning scholarship closure, applicant email updates and onboarding information.
 - [Partner with us](https://platformexplorers.com/partners.html): Opportunities to support the community with learning spaces, laptops and access to paid tools or platforms.
 - [Contact](https://platformexplorers.com/contact.html): Contact information and ways to connect with Platform Explorers.
 

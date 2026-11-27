@@ -58,3 +58,12 @@
 .scholarship-brand-name>span{display:block;font-size:7px;letter-spacing:3.4px;margin:5px 0 0 2px}
 .scholarship-brand-datacamp{display:block;width:145px;max-width:45%;height:auto}
 @media(max-width:360px){.scholarship-logos{gap:16px}.scholarship-brand-name{font-size:11px}.scholarship-brand-name>span{font-size:6px;letter-spacing:2.8px}}
+
+/* Closed applications: keep the newsletter invitation and applicant dates clear. */
+.registration-intro>.scholarship-closed-label{display:inline-block;margin-bottom:16px;padding:7px 12px;background:var(--green);color:var(--ink);font-size:16px;font-weight:600;border-radius:4px}
+.scholarship-next{padding-top:36px;padding-bottom:36px;border-top:1px solid var(--line)}
+.scholarship-next>h2{font-size:30px;line-height:1.3;letter-spacing:-1px;max-width:650px;margin:0 0 28px}
+.scholarship-next-steps{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.scholarship-next-steps h3{font-size:19px;line-height:1.4;letter-spacing:-.3px;margin:0 0 12px}
+.scholarship-next-steps p{font-size:16px;line-height:1.8;color:var(--muted);max-width:470px;margin:0}
+@media(max-width:760px){.scholarship-next{padding-top:30px;padding-bottom:30px}.scholarship-next>h2{font-size:26px}.scholarship-next-steps{grid-template-columns:1fr;gap:26px}}
